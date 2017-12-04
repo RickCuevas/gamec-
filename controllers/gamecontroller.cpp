@@ -41,126 +41,124 @@ void BlogController::welcome()
 void BlogController::start()
 {
 
-    TSqlORMapper<MonsterObject> mapper;
-    mapper.removeAll();
-    TSqlORMapper<PlayerObject> mapper;
-    mapper.removeAll();
-    TSqlORMapper<WeaponObject> mapper;
-    mapper.removeAll();
-
-    int monster_length = Monster::count();
-    int weapon_length = Weapon::count();
-
-    QList<Monster> monsters =  Monster::getAll();
-    QList<Weapon> weapons = Weapon::getAll();
-
-    for (int i=0; i < monster_length -1; i++) {
-        monsters[i].remove();
-
-    }
-    for (int i=0; i < weapon_length -1; i++) {
-        weapons[i].remove();
-    }
+    // TSqlORMapper<MonsterObject> mapper;
+    // mapper.removeAll();
+    // TSqlORMapper<PlayerObject> mapper;
+    // mapper.removeAll();
+    // TSqlORMapper<WeaponObject> mapper;
+    // mapper.removeAll();
+    //
+    // int monster_length = Monster::count();
+    // int weapon_length = Weapon::count();
+    //
+    // QList<Monster> monsters =  Monster::getAll();
+    // QList<Weapon> weapons = Weapon::getAll();
+    //
+    // for (int i=0; i < monster_length -1; i++) {
+    //     monsters[i].remove();
+    //
+    // }
+    // for (int i=0; i < weapon_length -1; i++) {
+    //     weapons[i].remove();
+    // }
 
     // make player
     PlayerObject player1;
+    player1.hp = 100;
     player1.space = 0;
+    player1.alignment = "good";
+    player1.name = "Rick";
     player1.create();
 
 
 
     //make monsters
-    MonsterObject DragonSpawn;
-    DragonSpawn.name = "DragonSpawn";
-    DragonSpawn.space = things_to_map[0];
-    DragonSpawn.hp = 2 ;
-    DragonSpawn.url = "" ;
-    DragonSpawn.create();
+    MonsterObject Polywhirl;
+    Polywhirl.name = "Polywhirl";
+    Polywhirl.space = things_to_map[0];
+    Polywhirl.hp = 2 ;
+    Polywhirl.url = "http://www.oocities.org/tokyo/blossom/9377/Koffing_Misc/Poliwhirl.gif" ;
+    Polywhirl.create();
+    MonsterObject Charmander;
+    Charmander.name = "Charmander";
+    Charmander.space = things_to_map[1];;
+    Charmander.hp = 2 ;
+    Charmander.hp = 2 ;
+    Charmander.url = "http://fc02.deviantart.net/fs70/f/2011/174/0/d/charmander_by_sageraziel-d3jt9kq.gif" ;
+    Charmander.create();
+    MonsterObject Serpent;
+    Serpent.name = "Serpent";
+    Serpent.space = things_to_map[2]; ;
+    Serpent.hp = 2 ;
+    Serpent.url = "https://pa1.narvii.com/6642/bcd71eb8ca74a8af0561b54e82a8d531e04af48e_128.gif" ;
+    Serpent.create();
+    MonsterObject Robot;
+    Robot.name = "Robot";
+    Robot.space = things_to_map[3]; ;
+    Robot.hp = 2 ;
+    Robot.url = "http://www.animatedimages.org/data/media/118/animated-robot-image-0014.gif" ;
+    Robot.create();
+    MonsterObject Knight;
+    Knight.name =  "Knight";
+    Knight.space = things_to_map[4]; ;
+    Knight.hp = 2 ;
+    Knight.url = "http://www.oocities.org/kevins_killa_gifs/warrior01.gif" ;
+    Knight.create();
     MonsterObject SeaMonster;
     SeaMonster.name = "SeaMonster";
-    SeaMonster.space = things_to_map[1];;
+    SeaMonster.space = things_to_map[5]; ;
     SeaMonster.hp = 2 ;
-    SeaMonster.hp = 2 ;
-    SeaMonster.url = "" ;
+    SeaMonster.url = "https://orig00.deviantart.net/b32d/f/2017/038/1/2/1259aba8597166d46af82ded72f254f3-dayaa7q.gif" ;
     SeaMonster.create();
-    MonsterObject Alien;
-    Alien.name = "Alien";
-    Alien.space = things_to_map[2]; ;
-    Alien.hp = 2 ;
-    Alien.url = "" ;
-    Alien.create();
-    MonsterObject Burro;
-    Burro.name = "Burro";
-    Burro.space = things_to_map[3]; ;
-    Burro.hp = 2 ;
-    Burro.url = "" ;
-    Burro.create();
-    MonsterObject KillerMouse;
-    KillerMouse.name =  "KillerMouse";
-    KillerMouse.space = things_to_map[4]; ;
-    KillerMouse.hp = 2 ;
-    KillerMouse.url = "" ;
-    KillerMouse.create();
-    MonsterObject Gnome;
-    Gnome.name = "Gnome";
-    Gnome.space = things_to_map[5]; ;
-    Gnome.hp = 2 ;
-    Gnome.url = "" ;
-    Gnome.create();
-    MonsterObject EvilAstronaut;
-    EvilAstronaut.name =  "EvilAstronaut";
-    EvilAstronaut.space = things_to_map[6]; ;
-    EvilAstronaut.hp = 2 ;
-    EvilAstronaut.url = "" ;
-    EvilAstronaut.create();
-    MonsterObject Crocasaurouse;
-    Crocasaurouse.name = "Crocasaurouse";
-    Crocasaurouse.space = things_to_map[7]; ;
-    Crocasaurouse.hp = 2 ;
-    Crocasaurouse.url = "" ;
-    Crocasaurouse.create();
-    MonsterObject Harpy;
-    Harpy.name = "Harpy" ;
-    Harpy.space = things_to_map[8]; ;
-    Harpy.hp = 2 ;
-    Harpy.url = "" ;
-    Harpy.create();
-    MonsterObject Wolf;
-    Wolf.name = "Wolf";
-    Wolf.space = things_to_map[9]; ;
-    Wolf.hp = 2 ;
-    Wolf.url = "" ;
-    Wolf.create();
-    MonsterObject DarkTinkerbell;
-    DarkTinkerbell.name = "DarkTinkerbell";
-    DarkTinkerbell.space = things_to_map[10]; ;
-    DarkTinkerbell.hp = 2 ;
-    DarkTinkerbell.url = "" ;
-    DarkTinkerbell.create();
-    MonsterObject Bear;
-    Bear.name = "Bear" ;
-    Bear.space = things_to_map[11]; ;
-    Bear.hp = 2 ;
-    Bear.url = "" ;
-    Bear.create();
-    MonsterObject Ghost;
-    Ghost.name = "Ghost";
-    Ghost.space = things_to_map[12]; ;
-    Ghost.hp = 2 ;
-    Ghost.url = "" ;
-    Ghost.create();
-    MonsterObject Cyclopse;
-    Cyclopse.name = "Cyclopse";
-    Cyclopse.space = things_to_map[13]; ;
-    Cyclopse.hp = 2 ;
-    Cyclopse.url = "" ;
-    Cyclopse.create();
+    MonsterObject EvilMushroom;
+    EvilMushroom.name =  "EvilMushroom";
+    EvilMushroom.space = things_to_map[6]; ;
+    EvilMushroom.hp = 2 ;
+    EvilMushroom.url = "http://ludumdare.com/compo/wp-content/uploads/2015/09/BAD-MUSHROOM-walk2.gif" ;
+    EvilMushroom.create();
+    MonsterObject DarkGenie;
+    DarkGenie.name = "DarkGenie";
+    DarkGenie.space = things_to_map[7]; ;
+    DarkGenie.hp = 2 ;
+    DarkGenie.url = "http://francoisegamma.computersclub.org/gifs/genie_e0.gif" ;
+    DarkGenie.create();
+    MonsterObject Rexy;
+    Rexy.name = "Rexy" ;
+    Rexy.space = things_to_map[8]; ;
+    Rexy.hp = 2 ;
+    Rexy.url = "http://buttonshy.com/championland/PL-TDBG/TrexJump.gif" ;
+    Rexy.create();
+    MonsterObject DarkKnight;
+    DarkKnight.name = "DarkKnight";
+    DarkKnight.space = things_to_map[9]; ;
+    DarkKnight.hp = 2 ;
+    DarkKnight.url = "https://orig00.deviantart.net/f150/f/2016/077/b/0/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif" ;
+    DarkKnight.create();
+    MonsterObject LordKnight;
+    LordKnight.name = "LordKnight";
+    LordKnight.space = things_to_map[10]; ;
+    LordKnight.hp = 2 ;
+    LordKnight.url = "https://i.imgur.com/ZmMQJwB.gif" ;
+    LordKnight.create();
+    MonsterObject EvilKirby;
+    EvilKirby.name = "EvilKirby" ;
+    EvilKirby.space = things_to_map[11]; ;
+    EvilKirby.hp = 2 ;
+    EvilKirby.url = "http://3.bp.blogspot.com/_IrdEB7DnyGc/Si76otEI4LI/AAAAAAAAALA/xtrxZSWWz2E/s400/sword-kirby.gif" ;
+    EvilKirby.create();
+    MonsterObject ElItaliano;
+    ElItaliano.name = "ElItaliano";
+    ElItaliano.space = things_to_map[12]; ;
+    ElItaliano.hp = 2 ;
+    ElItaliano.url = "https://orig00.deviantart.net/de7a/f/2016/345/c/d/super_mario_run_by_t_free-daraj8q.gif" ;
+    ElItaliano.create();
     MonsterObject Dragon;
     Dragon.name = "Dragon";
-    Dragon.space = things_to_map[14]; ;
+    Dragon.space = 27 ;
     Dragon.hp = 2 ;
-    Dragon.url = "" ;
+    Dragon.url = "http://media.giphy.com/media/3o85xFeUIuMDHsLmFi/giphy.gif" ;
     Dragon.create();
+
 
 
     //
