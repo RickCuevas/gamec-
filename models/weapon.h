@@ -64,4 +64,5 @@ private:
 Q_DECLARE_METATYPE(Weapon)
 Q_DECLARE_METATYPE(QList<Weapon>)
 
+
 #endif // WEAPON_H

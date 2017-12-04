@@ -1,16 +1,17 @@
-
-<% tfetch(Weapon, weap); %>
+<%#include "weapon.h" %>
+<% tfetch(QString, name); %>
+<% tfetch(QString, url); %>
 
     <tr>
 
-      <td class="chrm"> <img src="weap.url" alt="" /> </td>
+      <td class="chrm"> <img src="<%=url%>" alt="" /> </td>
       <td class="pika"> <img src="https://files.gamebanana.com/img/ico/sprays/pokemon_running_side_animated.gif" alt="" /> </td>
 
     </tr>
     <tr>
       <td colspan=2 class='cnsl'><div class="status"> <span></span> <br>
-          <a href="#"> You found a .....<%= weap.name%>!</a><br>
-          <a href="http://localhost:8800/Blog/battle">> Continue?</a> <br>
+          <a href="#"> You found a .....<%= name%>!</a><br>
+          <a href="http://localhost:8800/Game/staging">> Continue?</a> <br>
 
 
         </div></td>
