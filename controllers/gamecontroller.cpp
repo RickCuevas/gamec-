@@ -265,8 +265,10 @@ Player current_player = Player::get(1);
 
 int monster_length = Monster::count();
 int weapon_length = Weapon::count();
+int item_length = Item::count();
 QList<Monster> monsters =  Monster::getAll();
 QList<Weapon> weapons = Weapon::getAll();
+QList<Item> items = Item::getAll();
 
 bool mfound = false;
 bool wfound = false;
@@ -285,6 +287,15 @@ for (int i=0; i < weapon_length -1; i++) {
     if (weapons[i].space() == current_player.space()) {
         weapons[i].setEquipped("true");
         weapons[i].update();
+
+        wfound = true;
+        // redirect( urla("equip_option") );
+    }
+}
+for (int i=0; i < item_length -1; i++) {
+    if (items[i].space() == current_player.space()) {
+        items[i].setEquipped("true");
+        items[i].update();
 
         wfound = true;
         // redirect( urla("equip_option") );
@@ -355,6 +366,7 @@ void GameController::battle()
             texport(url);
             texport(name);
             monsters[i].setBattle("false");
+            monsters[i].update();
 
 
         }

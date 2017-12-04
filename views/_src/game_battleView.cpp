@@ -17,9 +17,9 @@ QString game_battleView::toString()
   responsebody += QLatin1String("\n\n");
   tfetch(QString, name);
   tfetch(QString, url);
-  responsebody += QLatin1String("\n\n    <tr>\n\n      <td class=\"chmr\"> <img src=\"");
+  responsebody += QLatin1String("\n\n    <tr>\n      <td class=\"pika\"> <img src=\"https://files.gamebanana.com/img/ico/sprays/pokemon_running_side_animated.gif\" alt=\"\" /> </td>\n      <td class=\"chmr\"> <img src=\"");
   responsebody += THttpUtility::htmlEscape(url);
-  responsebody += QLatin1String("\" alt=\"\" /> </td>\n      <!-- human -->\n      <td class=\"pika\"> <img src=\"https://files.gamebanana.com/img/ico/sprays/pokemon_running_side_animated.gif\" alt=\"\" /> </td>\n\n\n    </tr>\n    <tr>\n      <td colspan=2 class='cnsl'><div class=\"status\"> <span></span> <br>\n          <a href=\"#\">....Defeat ");
+  responsebody += QLatin1String("\" alt=\"\" /> </td>\n      <!-- human -->\n\n\n\n    </tr>\n    <tr>\n      <td colspan=2 class='cnsl'><div class=\"status\"> <span></span> <br>\n          <a href=\"#\">....Defeat ");
   responsebody += THttpUtility::htmlEscape(name);
   responsebody += QLatin1String("</a><br>\n          <a href=\"#\">> Attack</a><br>\n          <a href=\"#\">> Item</a> <br>\n          <a href=\"http://localhost:8800/Game/staging\">> Run</a>\n\n        </div></td>\n    </tr>\n");
 
