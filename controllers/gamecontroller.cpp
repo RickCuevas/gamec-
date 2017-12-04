@@ -81,74 +81,74 @@ void BlogController::start()
     Polywhirl.create();
     MonsterObject Charmander;
     Charmander.name = "Charmander";
-    Charmander.space = things_to_map[1];;
+    Charmander.space = things_to_map[1];
     Charmander.hp = 2 ;
     Charmander.hp = 2 ;
     Charmander.url = "http://fc02.deviantart.net/fs70/f/2011/174/0/d/charmander_by_sageraziel-d3jt9kq.gif" ;
     Charmander.create();
     MonsterObject Serpent;
     Serpent.name = "Serpent";
-    Serpent.space = things_to_map[2]; ;
+    Serpent.space = things_to_map[2];
     Serpent.hp = 2 ;
     Serpent.url = "https://pa1.narvii.com/6642/bcd71eb8ca74a8af0561b54e82a8d531e04af48e_128.gif" ;
     Serpent.create();
     MonsterObject Robot;
     Robot.name = "Robot";
-    Robot.space = things_to_map[3]; ;
+    Robot.space = things_to_map[3];
     Robot.hp = 2 ;
     Robot.url = "http://www.animatedimages.org/data/media/118/animated-robot-image-0014.gif" ;
     Robot.create();
     MonsterObject Knight;
     Knight.name =  "Knight";
-    Knight.space = things_to_map[4]; ;
+    Knight.space = things_to_map[4];
     Knight.hp = 2 ;
     Knight.url = "http://www.oocities.org/kevins_killa_gifs/warrior01.gif" ;
     Knight.create();
     MonsterObject SeaMonster;
     SeaMonster.name = "SeaMonster";
-    SeaMonster.space = things_to_map[5]; ;
+    SeaMonster.space = things_to_map[5];
     SeaMonster.hp = 2 ;
     SeaMonster.url = "https://orig00.deviantart.net/b32d/f/2017/038/1/2/1259aba8597166d46af82ded72f254f3-dayaa7q.gif" ;
     SeaMonster.create();
     MonsterObject EvilMushroom;
     EvilMushroom.name =  "EvilMushroom";
-    EvilMushroom.space = things_to_map[6]; ;
+    EvilMushroom.space = things_to_map[6];
     EvilMushroom.hp = 2 ;
     EvilMushroom.url = "http://ludumdare.com/compo/wp-content/uploads/2015/09/BAD-MUSHROOM-walk2.gif" ;
     EvilMushroom.create();
     MonsterObject DarkGenie;
     DarkGenie.name = "DarkGenie";
-    DarkGenie.space = things_to_map[7]; ;
+    DarkGenie.space = things_to_map[7];
     DarkGenie.hp = 2 ;
     DarkGenie.url = "http://francoisegamma.computersclub.org/gifs/genie_e0.gif" ;
     DarkGenie.create();
     MonsterObject Rexy;
     Rexy.name = "Rexy" ;
-    Rexy.space = things_to_map[8]; ;
+    Rexy.space = things_to_map[8];
     Rexy.hp = 2 ;
     Rexy.url = "http://buttonshy.com/championland/PL-TDBG/TrexJump.gif" ;
     Rexy.create();
     MonsterObject DarkKnight;
     DarkKnight.name = "DarkKnight";
-    DarkKnight.space = things_to_map[9]; ;
+    DarkKnight.space = things_to_map[9];
     DarkKnight.hp = 2 ;
     DarkKnight.url = "https://orig00.deviantart.net/f150/f/2016/077/b/0/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif" ;
     DarkKnight.create();
     MonsterObject LordKnight;
     LordKnight.name = "LordKnight";
-    LordKnight.space = things_to_map[10]; ;
+    LordKnight.space = things_to_map[10];
     LordKnight.hp = 2 ;
     LordKnight.url = "https://i.imgur.com/ZmMQJwB.gif" ;
     LordKnight.create();
     MonsterObject EvilKirby;
     EvilKirby.name = "EvilKirby" ;
-    EvilKirby.space = things_to_map[11]; ;
+    EvilKirby.space = things_to_map[11];
     EvilKirby.hp = 2 ;
     EvilKirby.url = "http://3.bp.blogspot.com/_IrdEB7DnyGc/Si76otEI4LI/AAAAAAAAALA/xtrxZSWWz2E/s400/sword-kirby.gif" ;
     EvilKirby.create();
     MonsterObject ElItaliano;
     ElItaliano.name = "ElItaliano";
-    ElItaliano.space = things_to_map[12]; ;
+    ElItaliano.space = things_to_map[12];
     ElItaliano.hp = 2 ;
     ElItaliano.url = "https://orig00.deviantart.net/de7a/f/2016/345/c/d/super_mario_run_by_t_free-daraj8q.gif" ;
     ElItaliano.create();
@@ -165,40 +165,68 @@ void BlogController::start()
     //make weapons
     WeaponObject BroadSword;
     BroadSword.name = "BroadSword";
-    BroadSword.space = things_to_map[15]; ;
+    BroadSword.space = things_to_map[15];
     BroadSword.attack = 2 ;
-    BroadSword.url = "" ;
+    BroadSword.url = "http://i.imgur.com/3p0tmCI.gif" ;
     BroadSword.create();
 	WeaponObject Mace;
     Mace.name = "Mace";
-    Mace.space = things_to_map[16]; ;
+    Mace.space = things_to_map[16];
     Mace.attack = 2 ;
-    Mace.url = "" ;
+    Mace.url = "https://www.shareicon.net/data/128x128/2015/11/01/665365_golf_512x512.png" ;
     Mace.create();
 	WeaponObject Crossbow;
     Crossbow.name = "Crossbow";
-    Crossbow.space = things_to_map[17]; ;
+    Crossbow.space = things_to_map[17];
     Crossbow.attack = 2 ;
-    Crossbow.url = "" ;
+    Crossbow.url = "https://www.shareicon.net/data/128x128/2016/09/02/823983_arrow_512x512.png" ;
     Crossbow.create();
 	WeaponObject Flail;
     Flail.name = "Flail";
-    Flail.space = things_to_map[18]; ;
+    Flail.space = things_to_map[18];
     Flail.attack = 2 ;
-    Flail.url = "" ;
+    Flail.url = "https://cdn1.iconfinder.com/data/icons/outlined-medieval-icons-pack/200/weapons_flail-128.png" ;
     Flail.create();
     WeaponObject Whip;
     Whip.name = "Whip";
-    Whip.space = things_to_map[19]; ;
+    Whip.space = things_to_map[19];
     Whip.attack = 2 ;
-    Whip.url= "" ;
+    Whip.url= "https://findicons.com/files/icons/1236/indiana_jones_and_the_raiders_of_the_lost_ark/128/whip.png" ;
     Whip.create();
     WeaponObject Staff;
     Staff.name = "Staff";
-    Staff.space = things_to_map[20]; ;
+    Staff.space = things_to_map[20];
     Staff.attack = 2 ;
-    Staff.url = "" ;
+    Staff.url = "https://cdn4.iconfinder.com/data/icons/witchcraft-icons/200/magic_staff-128.png" ;
     Staff.create();
+
+    // make items
+
+    ItemObject Curse1;
+    Curse1.name = "Curse";
+    Curse1.space = things_to_map[21];
+    Curse1.url = "http://icons.iconarchive.com/icons/designcontest/vintage/128/Magic-Wand-icon.png"
+    Curse1.create();
+    ItemObject Curse2;
+    Curse2.name = "Curse";
+    Curse2.space = things_to_map[22];
+    Curse2.url = "http://icons.iconarchive.com/icons/designcontest/vintage/128/Magic-Wand-icon.png"
+    Curse2.create();
+    ItemObject MagicRelic;
+    MagicRelic.name = "MagicRelic";
+    MagicRelic.space = things_to_map[23];
+    MagicRelic.url = "https://cdn4.iconfinder.com/data/icons/free-crystal-icons/128/Citrine.png"
+    MagicRelic.create();
+    ItemObject Potion1;
+    Potion1.name = "Potion";
+    Potion1.space = things_to_map[24];
+    Potion1.url = "http://dryicons.com/uploads/icon/preview/11351/icon_grid_1x_0fd38ac8-5986-4376-ae64-a831c663f194.png"
+    Potion1.create();
+    ItemObject Potion2;
+    Potion2.name = "Potion";
+    Potion2.space = things_to_map[25];
+    Potion2.url = "http://dryicons.com/uploads/icon/preview/11351/icon_grid_1x_0fd38ac8-5986-4376-ae64-a831c663f194.png"
+    Potion2.create();
 
  redirect( urla("loop") );
 
@@ -255,7 +283,7 @@ void BlogController::nada() {
     render();
 }
 
-void BlogController::equip_player(){
+void BlogController::equip(){
     Player current_player = Player::get(1);
     //logic to equipt weapon to player
 
@@ -274,52 +302,6 @@ void BlogController::staging() {
 void BlogController::battle()
 {
     // query to find  the monster that you will be fighting
-    if(monster.name == "Polywhirl") {
-        std::string image_url = "http://www.oocities.org/tokyo/blossom/9377/Koffing_Misc/Poliwhirl.gif";
-    }
-
-    else if(monster.name == "Charmander") {
-        std::string image_url = "http://fc02.deviantart.net/fs70/f/2011/174/0/d/charmander_by_sageraziel-d3jt9kq.gif";
-    }
-    else if(monster.name == "Serpent") {
-        std::string image_url = "https://pa1.narvii.com/6642/bcd71eb8ca74a8af0561b54e82a8d531e04af48e_128.gif";
-    }
-    else if(monster.name == "Robo") {
-        std::string image_url = "http://www.animatedimages.org/data/media/118/animated-robot-image-0014.gif";
-    }
-    else if(monster.name == "Knight") {
-        std::string image_url = "http://www.oocities.org/kevins_killa_gifs/warrior01.gif";
-    }
-    else if(monster.name == "SeaMonster") {
-        std::string image_url = "https://orig00.deviantart.net/b32d/f/2017/038/1/2/1259aba8597166d46af82ded72f254f3-dayaa7q.gif";
-    }
-    else if(monster.name == "AngryMushroom") {
-        std::string image_url = "http://ludumdare.com/compo/wp-content/uploads/2015/09/BAD-MUSHROOM-walk2.gif";
-    }
-    else if(monster.name == "Dark Genie") {
-        std::string image_url = "http://francoisegamma.computersclub.org/gifs/genie_e0.gif";
-    }
-    else if(monster.name == "Cool T-Rex") {
-        std::string image_url = "http://buttonshy.com/championland/PL-TDBG/TrexJump.gif";
-    }
-    else if(monster.name == "Dark Knight") {
-        std::string image_url = "https://orig00.deviantart.net/f150/f/2016/077/b/0/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif";
-    }
-    else if(monster.name == "Lord Knight") {
-        std::string image_url = "https://i.imgur.com/ZmMQJwB.gif";
-    }
-    else if(monster.name == "Dark Knight") {
-        std::string image_url = "https://orig00.deviantart.net/f150/f/2016/077/b/0/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif";
-    }
-    else if(monster.name == "Evil Kirby") {
-        std::string image_url = "http://3.bp.blogspot.com/_IrdEB7DnyGc/Si76otEI4LI/AAAAAAAAALA/xtrxZSWWz2E/s400/sword-kirby.gif";
-    }
-    else if(monster.name == "The Italian") {
-        std::string image_url = "https://orig00.deviantart.net/de7a/f/2016/345/c/d/super_mario_run_by_t_free-daraj8q.gif";
-    }
-    else if(monster.name == "Dragon") {
-        std::string image_url = "http://media.giphy.com/media/3o85xFeUIuMDHsLmFi/giphy.gif";
-    }
 
 
 
