@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<%#include "game.h" %>
+<% tfetch(Game, game); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Game</h1>
+<dt>ID</dt><dd><%= game.id() %></dd><br />
+<dt>Created at</dt><dd><%= game.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= game.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= game.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("save", game.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

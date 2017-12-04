@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<%#include "item.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Item</h1>
+
+<%== linkTo("Create a new Item", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>Space</th>
+    <th>Name</th>
+    <th>Url</th>
+  </tr>
+<% tfetch(QList<Item>, itemList); %>
+<% for (const auto &i : itemList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.space() %></td>
+    <td><%= i.name() %></td>
+    <td><%= i.url() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

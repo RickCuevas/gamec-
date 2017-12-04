@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<%#include "player.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Player</h1>
+
+<%== linkTo("Create a new Player", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>Hp</th>
+    <th>Xp</th>
+    <th>Space</th>
+    <th>Alignment</th>
+    <th>Name</th>
+  </tr>
+<% tfetch(QList<Player>, playerList); %>
+<% for (const auto &i : playerList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.hp() %></td>
+    <td><%= i.xp() %></td>
+    <td><%= i.space() %></td>
+    <td><%= i.alignment() %></td>
+    <td><%= i.name() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

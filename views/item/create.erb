@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<%#include "item.h" %>
+<% tfetch(QVariantMap, item); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Item</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>Space<br /><input name="item[space]" value="<%= item["space"] %>" /></label>
+  </p>
+  <p>
+    <label>Name<br /><input name="item[name]" value="<%= item["name"] %>" /></label>
+  </p>
+  <p>
+    <label>Url<br /><input name="item[url]" value="<%= item["url"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

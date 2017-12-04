@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<%#include "game.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Game</h1>
+
+<%== linkTo("Create a new Game", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+  </tr>
+<% tfetch(QList<Game>, gameList); %>
+<% for (const auto &i : gameList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

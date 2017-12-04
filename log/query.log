@@ -1,0 +1,3 @@
+2017-12-03 19:32:38  [436434] [BEGIN] [databaseId:0]
+2017-12-03 19:32:38  [436434] SELECT "id","created_at","updated_at","lock_revision" FROM "game" t0
+2017-12-03 19:32:38  [436434] [COMMIT] [databaseId:0]

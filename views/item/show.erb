@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%#include "item.h" %>
+<% tfetch(Item, item); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Item</h1>
+<dt>ID</dt><dd><%= item.id() %></dd><br />
+<dt>Space</dt><dd><%= item.space() %></dd><br />
+<dt>Name</dt><dd><%= item.name() %></dd><br />
+<dt>Url</dt><dd><%= item.url() %></dd><br />
+<dt>Created at</dt><dd><%= item.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= item.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= item.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("save", item.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

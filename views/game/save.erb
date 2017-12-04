@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<%#include "game.h" %>
+<% tfetch(QVariantMap, game); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Editing Game</h1>
+
+<%== formTag(urla("save", game["id"]), Tf::Post) %>
+  <p>
+    <label>ID<br /><input type="text" name="game[id]" value="<%= game["id"] %>" readonly="readonly" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>
+
+<%== linkTo("Show", urla("show", game["id"])) %> |
+<%== linkTo("Back", urla("index")) %>
+</body>
+</html>
