@@ -36,26 +36,12 @@ void GameController::welcome()
 void GameController::start()
 {
 
-    // TSqlORMapper<MonsterObject> mapper;
-    // mapper.removeAll();
-    // TSqlORMapper<PlayerObject> mapper;
-    // mapper.removeAll();
-    // TSqlORMapper<WeaponObject> mapper;
-    // mapper.removeAll();
-    //
-    // int monster_length = Monster::count();
-    // int weapon_length = Weapon::count();
-    //
-    // QList<Monster> monsters =  Monster::getAll();
-    // QList<Weapon> weapons = Weapon::getAll();
-    //
-    // for (int i=0; i < monster_length -1; i++) {
-    //     monsters[i].remove();
-    //
-    // }
-    // for (int i=0; i < weapon_length -1; i++) {
-    //     weapons[i].remove();
-    // }
+
+    Player current_player = Player::get(1);
+
+    current_player.setSpace(0);
+    current_player.update();
+
 
     int weapon_length = Weapon::count();
     if(weapon_length < 3) {
@@ -289,6 +275,7 @@ QString nothing_found = "Nothing...found";
 for (int i=0; i < monster_length -1; i++) {
     if (monsters[i].space() == current_player.space()) {
         monsters[i].setBattle("true");
+        monsters[i].update();
 
         mfound = true;
         // redirect( urla("battle") );
@@ -297,6 +284,7 @@ for (int i=0; i < monster_length -1; i++) {
 for (int i=0; i < weapon_length -1; i++) {
     if (weapons[i].space() == current_player.space()) {
         weapons[i].setEquipped("true");
+        weapons[i].update();
 
         wfound = true;
         // redirect( urla("equip_option") );
@@ -333,6 +321,7 @@ void GameController::equip(){
             texport(url);
 
             weapons[i].setEquipped("false");
+            weapons[i].update();
 
         }
     }
@@ -348,6 +337,9 @@ void GameController::staging() {
    Player current_player = Player::get(1);
    int current_player_space = current_player.space();
    current_player.setSpace(current_player_space += dice);
+   current_player.update();
+   int updated_player_space = current_player.space();
+   texport(updated_player_space);
    texport(dice);
    render();
 }

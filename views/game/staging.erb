@@ -1,6 +1,7 @@
 
 
 <% tfetch(int, dice); %>
+<% tfetch(int, updated_player_space); %>
 
     <tr>
 
@@ -10,6 +11,7 @@
     </tr>
     <tr>
       <td colspan=2 class='cnsl'><div class="status"> <span></span> <br>
+          <a href="#">>>>>><%=updated_player_space%></a>
           <a href="#">> Dice rolls.....</a><br>
           <a href="#">> You rolled a ...<%=dice%>   !</a><br>
           <a href="http://localhost:8800/Game/loop">> Explore</a><br>
