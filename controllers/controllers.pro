@@ -26,3 +26,5 @@ HEADERS += playercontroller.h
 SOURCES += playercontroller.cpp
 HEADERS += weaponcontroller.h
 SOURCES += weaponcontroller.cpp
+HEADERS += placecontroller.h
+SOURCES += placecontroller.cpp

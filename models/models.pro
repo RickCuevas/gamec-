@@ -28,3 +28,6 @@ SOURCES += player.cpp
 HEADERS += sqlobjects/weaponobject.h
 HEADERS += weapon.h
 SOURCES += weapon.cpp
+HEADERS += sqlobjects/placeobject.h
+HEADERS += place.h
+SOURCES += place.cpp

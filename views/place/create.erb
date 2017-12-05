@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<%#include "place.h" %>
+<% tfetch(QVariantMap, place); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Place</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>Space<br /><input name="place[space]" value="<%= place["space"] %>" /></label>
+  </p>
+  <p>
+    <label>Name<br /><input name="place[name]" value="<%= place["name"] %>" /></label>
+  </p>
+  <p>
+    <label>Url<br /><input name="place[url]" value="<%= place["url"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

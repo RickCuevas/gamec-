@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%#include "place.h" %>
+<% tfetch(Place, place); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Place</h1>
+<dt>ID</dt><dd><%= place.id() %></dd><br />
+<dt>Space</dt><dd><%= place.space() %></dd><br />
+<dt>Name</dt><dd><%= place.name() %></dd><br />
+<dt>Url</dt><dd><%= place.url() %></dd><br />
+<dt>Created at</dt><dd><%= place.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= place.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= place.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("save", place.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>
