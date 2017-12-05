@@ -15,11 +15,12 @@ public slots:
     void index();
     void welcome();
     void loop();
-    void start();
+    void seed();
     void battle();
     void equip();
     void nada();
     void staging();
+    void reboot();
     void randomize_things_to_map();
     void show(const QString &id);
     void create();

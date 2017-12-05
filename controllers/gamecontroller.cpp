@@ -33,18 +33,64 @@ void GameController::welcome()
     render("welcome", "hello");
 }
 
-void GameController::start()
-{
+void GameController::reboot(){
+
+    int monster_length = Monster::count();
+    int weapon_length = Weapon::count();
+    int item_length = Item::count();
+    QList<Monster> monsters =  Monster::getAll();
+    QList<Weapon> weapons = Weapon::getAll();
+    QList<Item> items = Item::getAll();
+    for (int i=0; i < monster_length -1; i++) {
+
+            monsters[i].setSpace(things_to_map[i]);
+            int monst_space = monsters[i].space();
+            monsters[i].setHp(round(monst_space * .3));
+            monsters[i].setAttack(round(monst_space * .5));
+            monsters[i].update();
+    }
+    for (int i=0; i < weapon_length -1; i++) {
+
+            weapons[i].setSpace(things_to_map[i]);
+            int weap_space = weapons[i].space();
+            weapons[i].setAttack();
+            weapons[i].setEquipped();
+            weapons[i].setMain();
+             weapons[i].update();
+
+    }
+    for (int i=0; i < item_length -1; i++) {
+
+            items[i].setSpace(things_to_map[i]);
+            items[i].update();
+    }
 
 
     Player current_player = Player::get(1);
-
     current_player.setSpace(0);
     current_player.update();
 
 
+    redirect( urla("staging") );
+}
+
+void GameController::seed()
+{
+
     int weapon_length = Weapon::count();
-    if(weapon_length < 3) {
+    if (weapon_length > 3){
+        redirect( urla("randomize_things_to_map") );
+    }
+    else {
+
+    // Player current_player = Player::get(1);
+    //
+    // current_player.setSpace(0);
+    // current_player.update();
+
+
+
+    // if(weapon_length < 3) {
     // make player
     PlayerObject player1;
     player1.hp = 100;
@@ -272,6 +318,7 @@ QList<Item> items = Item::getAll();
 
 bool mfound = false;
 bool wfound = false;
+bool ifound = false;
 QString nothing_found = "Nothing...found";
 
 for (int i=0; i < monster_length -1; i++) {
@@ -285,8 +332,8 @@ for (int i=0; i < monster_length -1; i++) {
 }
 for (int i=0; i < weapon_length -1; i++) {
     if (weapons[i].space() == current_player.space()) {
-        weapons[i].setEquipped("true");
-        weapons[i].update();
+        // weapons[i].setEquipped("true");
+        // weapons[i].update();
 
         wfound = true;
         // redirect( urla("equip_option") );
@@ -294,10 +341,9 @@ for (int i=0; i < weapon_length -1; i++) {
 }
 for (int i=0; i < item_length -1; i++) {
     if (items[i].space() == current_player.space()) {
-        items[i].setEquipped("true");
-        items[i].update();
+        ifound = true;
 
-        wfound = true;
+
         // redirect( urla("equip_option") );
     }
 }
@@ -308,6 +354,10 @@ if (mfound == true){
 else if (wfound == true){
     redirect( urla("equip") );
 }
+else if (ifound == true){
+    redirect( urla("equip") );
+}
+
 
 else  {
     redirect(urla("nada"));
@@ -322,17 +372,36 @@ void GameController::nada() {
 }
 
 void GameController::equip(){
+    Player current_player = Player::get(1);
+
     int weapon_length = Weapon::count();
+    int item_length = Item::count();
     QList<Weapon> weapons = Weapon::getAll();
+    QList<Item> items = Item::getAll();
     for (int i=0; i < weapon_length -1; i++) {
-        if (weapons[i].equipped() == "true") {
+        if (weapons[i].space() == current_player.space()) {
             QString name = weapons[i].name();
             QString url = weapons[i].url();
+            weapons[i].setEquipped("true");
+            weapons[i].update();
             texport(name);
             texport(url);
 
-            weapons[i].setEquipped("false");
-            weapons[i].update();
+
+
+        }
+    }
+    for (int i=0; i < item_length -1; i++) {
+        if (items[i].space() == current_player.space()) {
+            QString name = items[i].name();
+            QString url = items[i].url();
+            texport(name);
+            texport(url);
+            items[i].setUrl("true");
+            items[i].update();
+
+
+
 
         }
     }
@@ -382,7 +451,10 @@ void GameController::battle()
 
 void GameController::randomize_things_to_map() {
 
+
 	std::random_shuffle(things_to_map.begin(), things_to_map.end(), my_random);
+    redirect(urla("reboot"));
+
 }
 
 void GameController::create()
