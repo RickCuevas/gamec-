@@ -44,7 +44,7 @@ void GameController::welcome()
 }
 
 void GameController::reboot(){
-    srand(time(NULL));
+    // srand(time(NULL));
 
 
     int monster_length = Monster::count();
@@ -122,6 +122,7 @@ void GameController::reboot(){
     Player current_player = Player::get(1);
     current_player.setSpace(1);
     current_player.setHp(100);
+    current_player.setXp(0);
     current_player.update();
 
 
@@ -415,6 +416,16 @@ bool mfound = false;
 bool wfound = false;
 bool ifound = false;
 bool pfound = false;
+
+if (current_player.space() == 30 || current_player.space() == 59 || current_player.space() == 88) {
+    for (int i=0; i <= monster_length -1; i++) {
+        if (monsters[i].name() == "Dragon") {
+            monsters[i].setSpace(monsters[i].space() + 29);
+            monsters[i].update();
+        }
+    }
+
+}
 
 
 
