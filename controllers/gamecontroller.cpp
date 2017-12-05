@@ -9,6 +9,7 @@
 #include "../models/sqlobjects/weaponobject.h"
 #include "../models/sqlobjects/itemobject.h"
 #include<array>
+#include<cmath>
 
 std::array<int, 98> things_to_map = {{ 2, 3, 4,  6, 7, 9,10,  12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25,  28, 29, 31, 32, 33, 35, 36, 38, 39,  41, 42, 43, 45, 46, 48, 49, 50,  52, 53, 54,  57, 58,  60, 61, 62,  64, 65,  67, 68,  70, 71, 72,  74, 75,  77, 79, 79,  81, 82, 83,  86, 87,  89, 90, 91, 93, 94,  96, 97, 99, 100, 101,  103, 104,  106, 107, 108, 110, 111, 112,   115, 116, 118, 119, 120,  122, 123,  125, 126, 128,129, 130, 132, 133, 135, 136, 137, 139, 140, 141}};
 
@@ -41,28 +42,32 @@ void GameController::reboot(){
     QList<Monster> monsters =  Monster::getAll();
     QList<Weapon> weapons = Weapon::getAll();
     QList<Item> items = Item::getAll();
+    int count = 0;
     for (int i=0; i < monster_length -1; i++) {
 
-            monsters[i].setSpace(things_to_map[i]);
+            monsters[i].setSpace(things_to_map[count]);
             int monst_space = monsters[i].space();
             monsters[i].setHp(round(monst_space * .3));
             monsters[i].setAttack(round(monst_space * .5));
             monsters[i].update();
+            count += 1;
     }
     for (int i=0; i < weapon_length -1; i++) {
 
-            weapons[i].setSpace(things_to_map[i]);
+            weapons[i].setSpace(things_to_map[count]);
             int weap_space = weapons[i].space();
-            weapons[i].setAttack();
-            weapons[i].setEquipped();
-            weapons[i].setMain();
+            weapons[i].setAttack(round(weap_space * 2));
+            weapons[i].setEquipped("false");
+            weapons[i].setMain("false");
              weapons[i].update();
+             count +=1;
 
     }
     for (int i=0; i < item_length -1; i++) {
 
-            items[i].setSpace(things_to_map[i]);
+            items[i].setSpace(things_to_map[count]);
             items[i].update();
+            count +=1;
     }
 
 
@@ -397,7 +402,7 @@ void GameController::equip(){
             QString url = items[i].url();
             texport(name);
             texport(url);
-            items[i].setUrl("true");
+            items[i].setSpace(1);
             items[i].update();
 
 
