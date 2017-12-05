@@ -1,0 +1,32 @@
+<%#include "item.h" %>
+
+
+
+<%int item_length = Item::count();%>
+<%QList<Item> items = Item::getAll(); %>
+
+
+
+    <tr>
+        <% for(int i = 0; i < item_length; i++) { %>
+
+            <%if( items[i].space() == 1) {%>
+
+                <a href="http://localhost:8800/Game/use_item?key=<%=items[i].name()%>"><img src="<%=items[i].url()%>" alt="" ></a>
+            <%}%>
+
+        <% } %>
+
+
+
+
+
+    </tr>
+    <tr>
+      <td colspan=2 class='cnsl'><div class="status"> <span></span> <br>
+          <a href="#">....Select item</a><br>
+          <a href="http://localhost:8800/Game/loop">> Return</a><br>
+
+
+        </div></td>
+    </tr>

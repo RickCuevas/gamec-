@@ -20,6 +20,7 @@
 //27 dragon
 std::array<int, 43> things_to_map = {{ 2, 3, 4,  6, 7, 9,10,  12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25,  28, 29, 31, 32, 33, 35, 36, 38, 39,  41, 42, 43, 45, 46, 48, 49, 50,  52, 53, 54,  57, 58,  60, 61, 62}};
 int player_hp_before_a_battle;
+bool relic_found = false;
 
 int my_random(int i) { return rand() % i; }
 int dice;
@@ -44,37 +45,7 @@ void GameController::welcome()
 
 void GameController::reboot(){
     srand(time(NULL));
-    //erase
-    // PlaceObject Cathedral1;
-    // Cathedral1.space = 8;
-    // Cathedral1.name ="Cathedral1";
-    // Cathedral1.url = "https://image.flaticon.com/icons/png/128/444/444678.png";
-    // Cathedral1.create();
-    // PlaceObject Cathedral2;
-    // Cathedral2.space = 15;
-    // Cathedral2.name ="Cathedral2";
-    // Cathedral2.url = "https://image.flaticon.com/icons/png/128/444/444678.png";
-    // Cathedral2.create();
-    // PlaceObject Graveyard1;
-    // Graveyard1.space = 11;
-    // Graveyard1.name ="Graveyard1";
-    // Graveyard1.url = "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png";
-    // Graveyard1.create();
-    // PlaceObject Graveyard2;
-    // Graveyard2.space = 22;
-    // Graveyard2.name ="Graveyard2";
-    // Graveyard2.url = "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png";
-    // Graveyard2.create();
-    // PlaceObject Well1;
-    // Well1.space = 5;
-    // Well1.name ="Well1";
-    // Well1.url = "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg";
-    // Well1.create();
-    // PlaceObject Well2;
-    // Well2.space = 18;
-    // Well2.name ="Well2";
-    // Well2.url = "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg";
-    // Well2.create();
+
 
     int monster_length = Monster::count();
     int weapon_length = Weapon::count();
@@ -85,7 +56,7 @@ void GameController::reboot(){
     QList<Item> items = Item::getAll();
     QList<Place> places = Place::getAll();
     int count = 0;
-    for (int i=0; i < monster_length -1; i++) {
+    for (int i=0; i <= monster_length -1; i++) {
 
             monsters[i].setSpace(things_to_map[count]);
             int monst_space = monsters[i].space();
@@ -94,7 +65,7 @@ void GameController::reboot(){
             monsters[i].update();
             count += 1;
     }
-    for (int i=0; i < weapon_length -1; i++) {
+    for (int i=0; i <= weapon_length -1; i++) {
 
             weapons[i].setSpace(things_to_map[count]);
             int weap_space = weapons[i].space();
@@ -105,13 +76,13 @@ void GameController::reboot(){
              count +=1;
 
     }
-    for (int i=0; i < item_length -1; i++) {
+    for (int i=0; i <= item_length -1; i++) {
 
             items[i].setSpace(things_to_map[count]);
             items[i].update();
             count +=1;
     }
-    for (int i=0; i < place_length -1; i++) {
+    for (int i=0; i <= place_length -1; i++) {
         if (places[i].name() == "Cathedral1" ){
             places[i].setSpace(8);
             places[i].update();
@@ -150,6 +121,7 @@ void GameController::reboot(){
 
     Player current_player = Player::get(1);
     current_player.setSpace(1);
+    current_player.setHp(100);
     current_player.update();
 
 
@@ -446,7 +418,7 @@ bool pfound = false;
 
 
 
-for (int i=0; i < monster_length -1; i++) {
+for (int i=0; i <= monster_length -1; i++) {
     if (monsters[i].space() == current_player.space()) {
         // monsters[i].setBattle("true");
         // monsters[i].update();
@@ -455,7 +427,7 @@ for (int i=0; i < monster_length -1; i++) {
         // redirect( urla("battle") );
     }
 }
-for (int i=0; i < weapon_length -1; i++) {
+for (int i=0; i <= weapon_length -1; i++) {
     if (weapons[i].space() == current_player.space()) {
         // weapons[i].setEquipped("true");
         // weapons[i].update();
@@ -464,7 +436,7 @@ for (int i=0; i < weapon_length -1; i++) {
         // redirect( urla("equip_option") );
     }
 }
-for (int i=0; i < item_length -1; i++) {
+for (int i=0; i <= item_length -1; i++) {
     if (items[i].space() == current_player.space()) {
         ifound = true;
 
@@ -472,7 +444,7 @@ for (int i=0; i < item_length -1; i++) {
         // redirect( urla("equip_option") );
     }
 }
-for (int i=0; i < place_length -1; i++) {
+for (int i=0; i <= place_length -1; i++) {
     if (places[i].space() == current_player.space()) {
         pfound = true;
 
@@ -511,18 +483,21 @@ void GameController::reserved_space(){
     int place_length = Place::count();
 
     QList<Place> places = Place::getAll();
+    QString message = "";
 
-    for (int i=0; i < place_length -1; i++) {
+    for (int i=0; i <= place_length -1; i++) {
         if (places[i].space() == current_player.space()) {
             if (places[i].url() == "https://image.flaticon.com/icons/png/128/444/444678.png"){
                 if(alignment == "good"){
 
                     current_player.setHp(round(current_player.hp() * 1.20));
                     current_player.update();
+                    message = "Hp increased by 20 percent";
                 }
                 else {
                     current_player.setHp(round(current_player.hp() * .80));
                     current_player.update();
+                    message = "Hp decreasedby 20 percent";
 
                 }
             }
@@ -531,10 +506,12 @@ void GameController::reserved_space(){
 
                     current_player.setHp(round(current_player.hp() * 1.20));
                     current_player.update();
+                    message = "Hp increased by 20 percent";
                 }
                 else {
                     current_player.setHp(round(current_player.hp() * .80));
                     current_player.update();
+                    message = "Hp decreasedby 20 percent";
 
                 }
 
@@ -544,10 +521,12 @@ void GameController::reserved_space(){
                 if (alignment == "good") {
                     current_player.setAlignment("evil");
                     current_player.update();
+                    message = "You are now evil";
                 }
                 else{
                     current_player.setAlignment("good");
                     current_player.update();
+                    message = "You are now good";
                 }
 
             }
@@ -558,6 +537,7 @@ void GameController::reserved_space(){
             QString url = places[i].url();
             texport(name);
             texport(url);
+            texport(message);
 
         }
     }
@@ -578,7 +558,7 @@ void GameController::equip(){
     int item_length = Item::count();
     QList<Weapon> weapons = Weapon::getAll();
     QList<Item> items = Item::getAll();
-    for (int i=0; i < weapon_length -1; i++) {
+    for (int i=0; i <= weapon_length -1; i++) {
         if (weapons[i].space() == current_player.space()) {
             QString name = weapons[i].name();
             QString url = weapons[i].url();
@@ -591,8 +571,11 @@ void GameController::equip(){
 
         }
     }
-    for (int i=0; i < item_length -1; i++) {
+    for (int i=0; i <= item_length -1; i++) {
         if (items[i].space() == current_player.space()) {
+            if (items[i].name() == "MagicRelic"){
+                relic_found = true;
+            }
             QString name = items[i].name();
             QString url = items[i].url();
             texport(name);
@@ -623,8 +606,10 @@ void GameController::staging() {
    current_player.setSpace(current_player_space += dice);
    current_player.update();
    int updated_player_space = current_player.space();
+   int xp = current_player.xp();
    texport(updated_player_space);
    texport(dice);
+   texport(xp);
    render();
 }
 
@@ -634,14 +619,55 @@ void GameController::battle()
     Player current_player = Player::get(1);
     player_hp_before_a_battle = current_player.hp();
 
+    int player_hp = current_player.hp();
+
+    texport(player_hp);
+    int player_attack = 20;
+    int weapon_length = Weapon::count();
+    QList<Weapon> weapons = Weapon::getAll();
+
+    for (int i=0; i <= weapon_length -1; i++) {
+        if (weapons[i].main() == "true") {
+            player_attack = weapons[i].attack();
+        }
+    }
+    texport(player_attack);
+
+    bool redirect_to_nada = false;
+
+
+
     int monster_length = Monster::count();
     QList<Monster> monsters =  Monster::getAll();
-    for (int i=0; i < monster_length -1; i++) {
+    for (int i=0; i <= monster_length -1; i++) {
         if (monsters[i].space() == current_player.space()) {
+            if (monsters[i].name() == "Dragon"){
+                if (current_player.xp() >= 20 && relic_found == true ){
+                    QString url = monsters[i].url();
+                    QString monst_name = monsters[i].name();
+                    int monst_attack = monsters[i].attack();
+                    int monst_hp = monsters[i].hp();
+                    texport(url);
+                    texport(monst_name);
+                    texport(monst_attack);
+                    texport(monst_hp);
+
+                }
+                else{
+                    redirect_to_nada = true;
+
+                }
+            }
+            else {
             QString url = monsters[i].url();
-            QString name = monsters[i].name();
+            QString monst_name = monsters[i].name();
+            int monst_attack = monsters[i].attack();
+            int monst_hp = monsters[i].hp();
             texport(url);
-            texport(name);
+            texport(monst_name);
+            texport(monst_attack);
+            texport(monst_hp);
+        }
 
 
 
@@ -653,17 +679,19 @@ void GameController::battle()
 
 
 
-
-    render();
+    if (redirect_to_nada == true) {
+        redirect(urla("nada"));
+    }
+    else{
+        render();
+    }
 }
 
 void GameController::run(){
 
 redirect(urla("dice_roll"));
 }
-void GameController::item_menu() {
 
-}
 void GameController::player_attack(){
     Player current_player = Player::get(1);
     int weapon_length = Weapon::count();
@@ -671,12 +699,12 @@ void GameController::player_attack(){
     QList<Monster> monsters =  Monster::getAll();
     QList<Weapon> weapons = Weapon::getAll();
     int player_attack = 20;
-    for (int i=0; i < weapon_length -1; i++) {
+    for (int i=0; i <= weapon_length -1; i++) {
         if (weapons[i].main() == "true") {
             player_attack = weapons[i].attack();
         }
     }
-    for (int i=0; i < monster_length -1; i++) {
+    for (int i=0; i <= monster_length -1; i++) {
         if (monsters[i].space() == current_player.space()) {
             QString url = monsters[i].url();
             QString name = monsters[i].name();
@@ -702,6 +730,9 @@ void GameController::player_attack(){
 }
 
 void GameController::monster_defeated(){
+
+        Player current_player = Player::get(1);
+        current_player.setHp(player_hp_before_a_battle);
     render();
 }
 void GameController::monster_attack(){
@@ -712,7 +743,7 @@ void GameController::monster_attack(){
     int monster_length = Monster::count();
     QList<Monster> monsters =  Monster::getAll();
 
-    for (int i = 0; i < monster_length -1; i++) {
+    for (int i = 0; i <= monster_length -1; i++) {
         if (monsters[i].space() == current_player.space()) {
             // QString url = monsters[i].url();
             // QString name = monsters[i].name();
@@ -732,6 +763,51 @@ void GameController::monster_attack(){
 
         }
     }
+}
+
+void GameController::item_menu(){
+    // int weapon_length = Weapon::count();
+    // QList<Weapon> weapons = Weapon::getAll();
+    // texport(weapons);
+    render();
+
+}
+void GameController::use_item(){
+    QString val = httpRequest().formItemValue("key");
+    Player current_player = Player::get(1);
+    int monster_length = Monster::count();
+    int item_length = Item::count();
+    QList<Monster> monsters =  Monster::getAll();
+    QList<Item> items = Item::getAll();
+    if (val == "Curse"){
+        for (int i = 0; i <= monster_length -1; i++){
+            if (monsters[i].space() == current_player.space()) {
+                monsters[i].setHp(round(monsters[i].hp() * .50));
+                monsters[i].update();
+            }
+        }
+        for (int i = 0; i <= item_length -1; i++){
+            if (items[i].space() == 1) {
+                items[i].setSpace(-1);
+                items[i].update();
+            }
+        }
+
+    }
+    else if (val == "Potion"){
+        current_player.setHp(round(current_player.hp() * 1.10));
+        current_player.update();
+        for (int i = 0; i <= item_length -1; i++){
+            if (items[i].space() == 1) {
+                items[i].setSpace(-1);
+                items[i].update();
+            }
+        }
+
+    }
+
+
+    redirect(urla("loop"));
 }
 
 
@@ -759,7 +835,7 @@ void GameController::select_primary_weapon(){
 
     int weapon_length = Weapon::count();
     QList<Weapon> weapons = Weapon::getAll();
-    for (int i=0; i < weapon_length -1; i++) {
+    for (int i=0; i <= weapon_length -1; i++) {
         if (weapons[i].main() == "true") {
             weapons[i].setMain("false");
             weapons[i].update();
@@ -769,7 +845,7 @@ void GameController::select_primary_weapon(){
 
 
     }
-    for (int i=0; i < weapon_length -1; i++) {
+    for (int i=0; i <= weapon_length -1; i++) {
         if (weapons[i].name() == val) {
             weapons[i].setMain("true");
             weapons[i].update();

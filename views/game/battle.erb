@@ -1,7 +1,12 @@
 
 
-<% tfetch(QString, name); %>
+<% tfetch(QString, monst_name); %>
 <% tfetch(QString, url); %>
+<% tfetch(QString, monst_hp); %>
+<% tfetch(QString, monst_attack); %>
+<% tfetch(QString, player_hp); %>
+<% tfetch(QString, player_attack); %>
+
 
 
     <tr>
@@ -14,7 +19,8 @@
     </tr>
     <tr>
       <td colspan=2 class='cnsl'><div class="status"> <span></span> <br>
-          <a href="#">....Defeat <%=name%></a><br>
+          <a href="#">>>>>> Defeat <%=monst_name%>  hp: <%=monst_hp%> attack: <%=monst_attack%></a><br>
+          <a href="#">>>>>>   Player hp:<%=player_hp%> attack:<%=player_attack%></a><br>
           <a href="http://localhost:8800/Game/player_attack">> Attack</a><br>
           <a href="http://localhost:8800/Game/item_menu">> Item</a> <br>
           <a href="http://localhost:8800/Game/run">> Run</a>

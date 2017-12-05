@@ -25,6 +25,7 @@ public slots:
     void player_attack();
     void monster_attack();
     void select_primary_weapon();
+    void use_item();
     void game_over();
     void run();
     void item_menu();
