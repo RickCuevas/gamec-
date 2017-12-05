@@ -609,6 +609,7 @@ void GameController::staging() {
    int xp = current_player.xp();
    int hp = current_player.hp();
    int attack = 20;
+   QString alignment = current_player.alignment();
 
    int weapon_length = Weapon::count();
 
@@ -623,6 +624,7 @@ void GameController::staging() {
 
    texport(updated_player_space);
    texport(dice);
+   texport(alignment);
    texport(xp);
    texport(hp);
    texport(attack);
@@ -746,11 +748,37 @@ void GameController::player_attack(){
 }
 
 void GameController::monster_defeated(){
+    Player current_player = Player::get(1);
+    current_player.setHp(player_hp_before_a_battle);
+    current_player.setXp(current_player.xp() + 5);
+    current_player.update();
 
-        Player current_player = Player::get(1);
-        current_player.setHp(player_hp_before_a_battle);
-    render();
+    int monster_length = Monster::count();
+    QList<Monster> monsters =  Monster::getAll();
+    bool final_victory = false;
+
+    for (int i = 0; i <= monster_length -1; i++) {
+        if (monsters[i].space() == current_player.space()) {
+            if (monsters[i].name() == "Dragon"){
+
+                final_victory = true;
+            }
+        }
+    }
+
+
+
+        if (final_victory == true){
+            render("welcome", "hello");
+        }
+        else{
+            render();
+        }
+
 }
+
+
+
 void GameController::monster_attack(){
 
 
