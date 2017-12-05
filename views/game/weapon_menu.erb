@@ -1,0 +1,32 @@
+<%#include "weapon.h" %>
+
+
+
+<%int weapon_length = Weapon::count();%>
+<%QList<Weapon> weapons = Weapon::getAll(); %>
+
+
+
+    <tr>
+        <% for(int i = 0; i < weapon_length; i++) { %>
+
+            <%if( weapons[i].equipped() == "true") {%>
+        
+                <a href="http://localhost:8800/Game/select_primary_weapon?key=<%=weapons[i].name()%>"><img src="<%=weapons[i].url()%>" alt="" ></a>
+            <%}%>
+
+        <% } %>
+
+
+
+
+
+    </tr>
+    <tr>
+      <td colspan=2 class='cnsl'><div class="status"> <span></span> <br>
+          <a href="#">....Select your weapon</a><br>
+          <a href="http://localhost:8800/Game/staging">> Return</a><br>
+
+
+        </div></td>
+    </tr>

@@ -18,8 +18,8 @@
 //g-11,22
 //26 entrance
 //27 dragon
-std::array<int, 98> things_to_map = {{ 2, 3, 4,  6, 7, 9,10,  12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25,  28, 29, 31, 32, 33, 35, 36, 38, 39,  41, 42, 43, 45, 46, 48, 49, 50,  52, 53, 54,  57, 58,  60, 61, 62,  64, 65,  67, 68,  70, 71, 72,  74, 75,  77, 79, 79,  81, 82, 83,  86, 87,  89, 90, 91, 93, 94,  96, 97, 99, 100, 101,  103, 104,  106, 107, 108, 110, 111, 112,   115, 116, 118, 119, 120,  122, 123,  125, 126, 128,129, 130, 132, 133, 135, 136, 137, 139, 140, 141}};
-
+std::array<int, 43> things_to_map = {{ 2, 3, 4,  6, 7, 9,10,  12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25,  28, 29, 31, 32, 33, 35, 36, 38, 39,  41, 42, 43, 45, 46, 48, 49, 50,  52, 53, 54,  57, 58,  60, 61, 62}};
+int player_hp_before_a_battle;
 
 int my_random(int i) { return rand() % i; }
 int dice;
@@ -153,7 +153,7 @@ void GameController::reboot(){
     current_player.update();
 
 
-    redirect( urla("staging") );
+    redirect( urla("dice_roll") );
 }
 
 void GameController::seed()
@@ -418,7 +418,7 @@ void GameController::seed()
 
 }
 
- redirect( urla("staging") );
+ redirect( urla("dice_roll") );
 
     // redirect_to *******
 }
@@ -505,7 +505,7 @@ else  {
 }
 void GameController::reserved_space(){
     Player current_player = Player::get(1);
-    int current_space =  current_player.space();
+
     QString alignment = current_player.alignment();
 
     int place_length = Place::count();
@@ -611,9 +611,13 @@ void GameController::equip(){
 
     // redirect(urla("loop"));
 }
+void GameController::dice_roll(){
+    dice = 1;
+    redirect(urla("staging"));
+}
 
 void GameController::staging() {
-   dice = rand() % 6 + 1;
+   // dice = rand() % 6 + 1;
    Player current_player = Player::get(1);
    int current_player_space = current_player.space();
    current_player.setSpace(current_player_space += dice);
@@ -626,7 +630,9 @@ void GameController::staging() {
 
 void GameController::battle()
 {
+
     Player current_player = Player::get(1);
+    player_hp_before_a_battle = current_player.hp();
 
     int monster_length = Monster::count();
     QList<Monster> monsters =  Monster::getAll();
@@ -651,11 +657,131 @@ void GameController::battle()
     render();
 }
 
+void GameController::run(){
+
+redirect(urla("dice_roll"));
+}
+void GameController::item_menu() {
+
+}
+void GameController::player_attack(){
+    Player current_player = Player::get(1);
+    int weapon_length = Weapon::count();
+    int monster_length = Monster::count();
+    QList<Monster> monsters =  Monster::getAll();
+    QList<Weapon> weapons = Weapon::getAll();
+    int player_attack = 20;
+    for (int i=0; i < weapon_length -1; i++) {
+        if (weapons[i].main() == "true") {
+            player_attack = weapons[i].attack();
+        }
+    }
+    for (int i=0; i < monster_length -1; i++) {
+        if (monsters[i].space() == current_player.space()) {
+            QString url = monsters[i].url();
+            QString name = monsters[i].name();
+            texport(url);
+            texport(name);
+            monsters[i].setHp(monsters[i].hp() - player_attack);
+            monsters[i].update();
+            if (monsters[i].hp() > 0) {
+                redirect(urla("monster_attack"));
+            }
+            else {
+                redirect(urla("monster_defeated"));
+            }
+
+
+
+
+        }
+    }
+
+
+
+}
+
+void GameController::monster_defeated(){
+    render();
+}
+void GameController::monster_attack(){
+
+
+    Player current_player = Player::get(1);
+
+    int monster_length = Monster::count();
+    QList<Monster> monsters =  Monster::getAll();
+
+    for (int i = 0; i < monster_length -1; i++) {
+        if (monsters[i].space() == current_player.space()) {
+            // QString url = monsters[i].url();
+            // QString name = monsters[i].name();
+            // texport(url);
+            // texport(name);
+            current_player.setHp(current_player.hp() - monsters[i].attack());
+            current_player.update();
+            if (current_player.hp() > 0) {
+                redirect(urla("player_attack"));
+            }
+            else {
+                redirect(urla("game_over"));
+            }
+
+
+
+
+        }
+    }
+}
+
+
+
+void GameController::game_over(){
+    render("game_over", "hello");
+}
 void GameController::randomize_things_to_map() {
 
 
 	std::random_shuffle(things_to_map.begin(), things_to_map.end(), my_random);
     redirect(urla("reboot"));
+
+}
+
+void GameController::weapon_menu(){
+    // int weapon_length = Weapon::count();
+    // QList<Weapon> weapons = Weapon::getAll();
+    // texport(weapons);
+    render();
+
+}
+void GameController::select_primary_weapon(){
+    QString val = httpRequest().formItemValue("key");
+
+    int weapon_length = Weapon::count();
+    QList<Weapon> weapons = Weapon::getAll();
+    for (int i=0; i < weapon_length -1; i++) {
+        if (weapons[i].main() == "true") {
+            weapons[i].setMain("false");
+            weapons[i].update();
+
+        }
+
+
+
+    }
+    for (int i=0; i < weapon_length -1; i++) {
+        if (weapons[i].name() == val) {
+            weapons[i].setMain("true");
+            weapons[i].update();
+
+        }
+
+
+
+    }
+
+
+    redirect(urla("staging"));
 
 }
 

@@ -13,7 +13,7 @@ public:
 
 QString game_stagingView::toString()
 {
-  responsebody.reserve(965);
+  responsebody.reserve(1062);
   responsebody += QLatin1String("\n\n");
   tfetch(int, dice);
   tfetch(int, updated_player_space);
@@ -21,7 +21,7 @@ QString game_stagingView::toString()
   responsebody += THttpUtility::htmlEscape(updated_player_space);
   responsebody += QLatin1String("</a>\n          <a href=\"#\">> Dice rolls.....</a><br>\n          <a href=\"#\">> You rolled a ...");
   responsebody += THttpUtility::htmlEscape(dice);
-  responsebody += QLatin1String("   !</a><br>\n          <a href=\"http://localhost:8800/Game/loop\">> Explore</a><br>\n          <a href=\"http://localhost:8800/Game/staging\">> Continue</a> <br>\n\n\n        </div></td>\n    </tr>\n");
+  responsebody += QLatin1String("   !</a><br>\n          <a href=\"http://localhost:8800/Game/loop\">> Explore</a><br>\n          <a href=\"http://localhost:8800/Game/dice_roll\">> Continue</a> <br>\n          <a href=\"http://localhost:8800/Game/weapon_menu\">> Change Primary Weapon</a> <br>\n\n\n        </div></td>\n    </tr>\n");
 
   return responsebody;
 }

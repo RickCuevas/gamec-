@@ -13,7 +13,7 @@ public:
 
 QString game_reserved_spaceView::toString()
 {
-  responsebody.reserve(774);
+  responsebody.reserve(776);
   responsebody += QLatin1String("\n");
   tfetch(QString, name);
   tfetch(QString, url);
@@ -21,7 +21,7 @@ QString game_reserved_spaceView::toString()
   responsebody += THttpUtility::htmlEscape(url);
   responsebody += QLatin1String("\" alt=\"\" /> </td>\n\n\n    </tr>\n    <tr>\n      <td colspan=2 class='cnsl'><div class=\"status\"> <span></span> <br>\n          <a href=\"#\"> You found a .....");
   responsebody += THttpUtility::htmlEscape(name);
-  responsebody += QLatin1String("!</a><br>\n          <a href=\"http://localhost:8800/Game/staging\">> Continue?</a> <br>\n\n\n        </div></td>\n    </tr>\n");
+  responsebody += QLatin1String("!</a><br>\n          <a href=\"http://localhost:8800/Game/dice_roll\">> Continue?</a> <br>\n\n\n        </div></td>\n    </tr>\n");
 
   return responsebody;
 }
