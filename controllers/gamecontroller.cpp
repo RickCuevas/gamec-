@@ -11,6 +11,11 @@
 #include<array>
 #include<cmath>
 
+//w-5,18
+//c-8,15
+//g-11,22
+//26 entrance
+//27 dragon
 std::array<int, 98> things_to_map = {{ 2, 3, 4,  6, 7, 9,10,  12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25,  28, 29, 31, 32, 33, 35, 36, 38, 39,  41, 42, 43, 45, 46, 48, 49, 50,  52, 53, 54,  57, 58,  60, 61, 62,  64, 65,  67, 68,  70, 71, 72,  74, 75,  77, 79, 79,  81, 82, 83,  86, 87,  89, 90, 91, 93, 94,  96, 97, 99, 100, 101,  103, 104,  106, 107, 108, 110, 111, 112,   115, 116, 118, 119, 120,  122, 123,  125, 126, 128,129, 130, 132, 133, 135, 136, 137, 139, 140, 141}};
 
 int my_random(int i) { return rand() % i; }
@@ -72,7 +77,7 @@ void GameController::reboot(){
 
 
     Player current_player = Player::get(1);
-    current_player.setSpace(0);
+    current_player.setSpace(1);
     current_player.update();
 
 
@@ -90,7 +95,7 @@ void GameController::seed()
 
     // Player current_player = Player::get(1);
     //
-    // current_player.setSpace(0);
+    // current_player.setSpace(1);
     // current_player.update();
 
 
@@ -324,7 +329,8 @@ QList<Item> items = Item::getAll();
 bool mfound = false;
 bool wfound = false;
 bool ifound = false;
-QString nothing_found = "Nothing...found";
+
+
 
 for (int i=0; i < monster_length -1; i++) {
     if (monsters[i].space() == current_player.space()) {
@@ -352,8 +358,11 @@ for (int i=0; i < item_length -1; i++) {
         // redirect( urla("equip_option") );
     }
 }
+if (){
+    redirect( urla("reserved_space") );
+}
 
-if (mfound == true){
+else if (mfound == true){
     redirect( urla("battle") );
 }
 else if (wfound == true){
@@ -371,7 +380,61 @@ else  {
 
 
 }
+void GemeController::reserved_space(){
+    Player current_player = Player::get(1);
+    int current_space =  current_player.space();
+    if (current_space <= 30){
+        modifier = 1;
+    }
+    else if (current_space<= 59){
+        modifier = 2;
+    }
+    else if (current_space<= 88){
+        modifier = 3;
+    }
+    else if (current_space<= 117){
+        modifier = 4;
+    }
+    else if (current_space<= 146){
+        modifier = 5;
+    }
+    else if (current_space<= 175){
+        modifier = 6;
+    }
+    else if (current_space<= 204){
+        modifier = 7;
+    }
+    else if (current_space<= 233){
+        modifier = 8;
+    }
+    else if (current_space<= 262){
+        modifier = 9;
+    }
+    else {
+        modifier = 10;
+    }
 
+    //w-5,18
+    //c-8,15
+    //g-11,22
+    //26 entrance
+    //27 dragon
+
+    if (current_space == ){
+
+    }
+    if(current_player.alignment() == "good"){
+        current_player.setHp(round(current_player.hp() * 1.20));
+        current_player.update();
+    }
+    else {
+        current_player.setHp(round(current_player.hp() * .80));
+        current_player.update();
+
+
+    }
+    render()
+}
 void GameController::nada() {
     render();
 }

@@ -21,6 +21,7 @@ public slots:
     void nada();
     void staging();
     void reboot();
+    void reserved_space();
     void randomize_things_to_map();
     void show(const QString &id);
     void create();
