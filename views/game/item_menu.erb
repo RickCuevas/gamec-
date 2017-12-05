@@ -3,16 +3,19 @@
 
 
 <%int item_length = Item::count();%>
+
 <%QList<Item> items = Item::getAll(); %>
 
 
 
-    <tr>
-        <% for(int i = 0; i < item_length; i++) { %>
 
+
+    <tr>
+
+        <% for(int i = 0; i <= item_length - 1; i++) { %>
             <%if( items[i].space() == 1) {%>
 
-                <a href="http://localhost:8800/Game/use_item?key=<%=items[i].name()%>"><img src="<%=items[i].url()%>" alt="" ></a>
+                <a href="http://localhost:8800/Game/use_item?key=<%=items[i].id()%>"><img src="<%=items[i].url()%>" alt="" ></a>
             <%}%>
 
         <% } %>

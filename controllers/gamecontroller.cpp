@@ -607,9 +607,25 @@ void GameController::staging() {
    current_player.update();
    int updated_player_space = current_player.space();
    int xp = current_player.xp();
+   int hp = current_player.hp();
+   int attack = 20;
+
+   int weapon_length = Weapon::count();
+
+   QList<Weapon> weapons = Weapon::getAll();
+
+   for (int i=0; i <= weapon_length -1; i++) {
+       if (weapons[i].main() == "true") {
+           attack = weapons[i].attack();
+       }
+   }
+
+
    texport(updated_player_space);
    texport(dice);
    texport(xp);
+   texport(hp);
+   texport(attack);
    render();
 }
 
@@ -766,14 +782,14 @@ void GameController::monster_attack(){
 }
 
 void GameController::item_menu(){
-    // int weapon_length = Weapon::count();
-    // QList<Weapon> weapons = Weapon::getAll();
-    // texport(weapons);
+
+
     render();
 
 }
 void GameController::use_item(){
     QString val = httpRequest().formItemValue("key");
+    int value = val.toInt();
     Player current_player = Player::get(1);
     int monster_length = Monster::count();
     int item_length = Item::count();
@@ -787,7 +803,7 @@ void GameController::use_item(){
             }
         }
         for (int i = 0; i <= item_length -1; i++){
-            if (items[i].space() == 1) {
+            if (items[i].id() == value) {
                 items[i].setSpace(-1);
                 items[i].update();
             }
@@ -798,7 +814,7 @@ void GameController::use_item(){
         current_player.setHp(round(current_player.hp() * 1.10));
         current_player.update();
         for (int i = 0; i <= item_length -1; i++){
-            if (items[i].space() == 1) {
+            if (items[i].id() == value) {
                 items[i].setSpace(-1);
                 items[i].update();
             }
