@@ -14,7 +14,7 @@ public:
 
 QString game_weapon_menuView::toString()
 {
-  responsebody.reserve(1062);
+  responsebody.reserve(1130);
     responsebody += QLatin1String("\n\n\n");
   int weapon_length = Weapon::count();
   QList<Weapon> weapons = Weapon::getAll();
@@ -22,8 +22,10 @@ QString game_weapon_menuView::toString()
   for(int i = 0; i < weapon_length; i++) {
   responsebody += QLatin1String("\n            ");
   if( weapons[i].equipped() == "true") {
-  responsebody += QLatin1String("        \n                <a href=\"http://localhost:8800/Game/select_primary_weapon?key=");
-  responsebody += THttpUtility::htmlEscape(weapons[i].name());
+  responsebody += QLatin1String("                ");
+  QString name = weapons[i].name();
+  responsebody += QLatin1String("\n                <a href=\"http://localhost:8800/Game/select_primary_weapon?key=");
+  responsebody += THttpUtility::htmlEscape(name);
   responsebody += QLatin1String("\"><img src=\"");
   responsebody += THttpUtility::htmlEscape(weapons[i].url());
   responsebody += QLatin1String("\" alt=\"\" ></a>\n            ");

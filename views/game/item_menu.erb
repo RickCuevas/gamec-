@@ -14,8 +14,9 @@
 
         <% for(int i = 0; i <= item_length - 1; i++) { %>
             <%if( items[i].space() == 1) {%>
+                <% int key = items[i].id()%>
 
-                <a href="http://localhost:8800/Game/use_item?key=<%=items[i].id()%>"><img src="<%=items[i].url()%>" alt="" ></a>
+                <a href="http://localhost:8800/Game/use_item?key=<%=key%>"><img src="<%=items[i].url()%>" alt="" ></a>
             <%}%>
 
         <% } %>

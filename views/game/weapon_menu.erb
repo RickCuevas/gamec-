@@ -11,8 +11,9 @@
         <% for(int i = 0; i < weapon_length; i++) { %>
 
             <%if( weapons[i].equipped() == "true") {%>
-        
-                <a href="http://localhost:8800/Game/select_primary_weapon?key=<%=weapons[i].name()%>"><img src="<%=weapons[i].url()%>" alt="" ></a>
+                <% QString name = weapons[i].name()%>
+
+                <a href="http://localhost:8800/Game/select_primary_weapon?key=<%= name %>"><img src="<%=weapons[i].url()%>" alt="" ></a>
             <%}%>
 
         <% } %>

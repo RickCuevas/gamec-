@@ -24,6 +24,8 @@ bool relic_found = false;
 
 int my_random(int i) { return rand() % i; }
 int dice;
+// int integer_test = 20;
+// QString string_test = "ORiginal";
 void GameController::index()
 {
     auto gameList = Game::getAll();
@@ -639,6 +641,8 @@ void GameController::staging() {
    texport(xp);
    texport(hp);
    texport(attack);
+   // texport(integer_test);
+   // texport(string_test);
    render();
 }
 
@@ -826,9 +830,12 @@ void GameController::item_menu(){
     render();
 
 }
+
 void GameController::use_item(){
     QString val = httpRequest().formItemValue("key");
     int value = val.toInt();
+    // integer_test = value;
+    // string_test = val;
     Player current_player = Player::get(1);
     int monster_length = Monster::count();
     int item_length = Item::count();

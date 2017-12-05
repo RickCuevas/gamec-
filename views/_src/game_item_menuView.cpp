@@ -14,7 +14,7 @@ public:
 
 QString game_item_menuView::toString()
 {
-  responsebody.reserve(1051);
+  responsebody.reserve(1121);
     responsebody += QLatin1String("\n\n\n");
   int item_length = Item::count();
   responsebody += QLatin1String("\n");
@@ -23,8 +23,10 @@ QString game_item_menuView::toString()
   for(int i = 0; i <= item_length - 1; i++) {
   responsebody += QLatin1String("            ");
   if( items[i].space() == 1) {
+  responsebody += QLatin1String("                ");
+  int key = items[i].id();
   responsebody += QLatin1String("\n                <a href=\"http://localhost:8800/Game/use_item?key=");
-  responsebody += THttpUtility::htmlEscape(items[i].id());
+  responsebody += THttpUtility::htmlEscape(key);
   responsebody += QLatin1String("\"><img src=\"");
   responsebody += THttpUtility::htmlEscape(items[i].url());
   responsebody += QLatin1String("\" alt=\"\" ></a>\n            ");

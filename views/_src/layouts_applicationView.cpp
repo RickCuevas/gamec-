@@ -13,8 +13,8 @@ public:
 
 QString layouts_applicationView::toString()
 {
-  responsebody.reserve(514);
-  responsebody += QLatin1String("<!DOCTYPE html>\n\n\n\n<html lang=\"en\" >\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Pokemon Battle WIP</title>\n\n\n\n      <link rel=\"stylesheet\" href=\"/css/style.css\">\n\n\n</head>\n\n<body>\n  <table>\n      ");
+  responsebody.reserve(508);
+  responsebody += QLatin1String("<!DOCTYPE html>\n\n\n\n<html lang=\"en\" >\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Knight Rider</title>\n\n\n\n      <link rel=\"stylesheet\" href=\"/css/style.css\">\n\n\n</head>\n\n<body>\n  <table>\n      ");
   responsebody += QVariant(yield()).toString();
   responsebody += QLatin1String("\n\n</table>\n  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>\n\n    <script  src=\"js/index.js\"></script>\n\n</body>\n</html>\n");
 
