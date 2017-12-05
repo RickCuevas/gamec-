@@ -1717,3 +1717,1280 @@
 2017-12-04 19:16:04  [618689] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
 2017-12-04 19:16:04  [618689] UPDATE player SET space=21,updated_at='2017-12-04T19:16:04',lock_revision=109 WHERE lock_revision=108 AND id=1
 2017-12-04 19:16:04  [618689] [COMMIT] [databaseId:0]
+2017-12-04 23:02:57  [839129] [BEGIN] [databaseId:0]
+2017-12-04 23:02:57  [839129] INSERT INTO place ("space", "name", "url", "created_at", "updated_at", "lock_revision") VALUES (8, 'Cathedral1', 'https://image.flaticon.com/icons/png/128/444/444678.png', '2017-12-04T23:02:57', '2017-12-04T23:02:57', 1)
+2017-12-04 23:02:57  [839129] INSERT INTO place ("space", "name", "url", "created_at", "updated_at", "lock_revision") VALUES (15, 'Cathedral2', 'https://image.flaticon.com/icons/png/128/444/444678.png', '2017-12-04T23:02:57', '2017-12-04T23:02:57', 1)
+2017-12-04 23:02:57  [839129] INSERT INTO place ("space", "name", "url", "created_at", "updated_at", "lock_revision") VALUES (11, 'Graveyard1', 'http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png', '2017-12-04T23:02:57', '2017-12-04T23:02:57', 1)
+2017-12-04 23:02:57  [839129] INSERT INTO place ("space", "name", "url", "created_at", "updated_at", "lock_revision") VALUES (22, 'Graveyard2', 'http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png', '2017-12-04T23:02:57', '2017-12-04T23:02:57', 1)
+2017-12-04 23:02:57  [839129] INSERT INTO place ("space", "name", "url", "created_at", "updated_at", "lock_revision") VALUES (5, 'Well1', 'http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg', '2017-12-04T23:02:57', '2017-12-04T23:02:57', 1)
+2017-12-04 23:02:57  [839129] INSERT INTO place ("space", "name", "url", "created_at", "updated_at", "lock_revision") VALUES (18, 'Well2', 'http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg', '2017-12-04T23:02:57', '2017-12-04T23:02:57', 1)
+2017-12-04 23:02:57  [839129] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:02:57  [839129] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:02:57  [839129] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:02:57  [839129] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:02:57  [839129] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:02:57  [839129] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:02:57  [839129] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:02:57  [839129] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=72,hp=22,attack=36,updated_at='2017-12-04T23:02:57',lock_revision=15 WHERE lock_revision=14 AND id=1
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=139,hp=42,attack=70,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=2
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=133,hp=40,attack=67,updated_at='2017-12-04T23:02:57',lock_revision=13 WHERE lock_revision=12 AND id=3
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=140,hp=42,attack=70,updated_at='2017-12-04T23:02:57',lock_revision=6 WHERE lock_revision=5 AND id=4
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=89,updated_at='2017-12-04T23:02:57',lock_revision=6 WHERE lock_revision=5 AND id=5
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=33,hp=10,attack=17,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=6
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=74,hp=22,attack=37,updated_at='2017-12-04T23:02:57',lock_revision=10 WHERE lock_revision=9 AND id=7
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=53,hp=16,attack=27,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=8
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=90,hp=27,attack=45,updated_at='2017-12-04T23:02:57',lock_revision=13 WHERE lock_revision=12 AND id=9
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=103,hp=31,attack=52,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=10
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=120,hp=36,attack=60,updated_at='2017-12-04T23:02:57',lock_revision=7 WHERE lock_revision=6 AND id=11
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=60,hp=18,attack=30,updated_at='2017-12-04T23:02:57',lock_revision=6 WHERE lock_revision=5 AND id=12
+2017-12-04 23:02:57  [839129] UPDATE monster SET space=14,hp=4,attack=7,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=13
+2017-12-04 23:02:57  [839129] UPDATE weapon SET space=7,attack=14,updated_at='2017-12-04T23:02:57',lock_revision=7 WHERE lock_revision=6 AND id=1
+2017-12-04 23:02:57  [839129] UPDATE weapon SET space=112,attack=224,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=2
+2017-12-04 23:02:57  [839129] UPDATE weapon SET space=71,attack=142,updated_at='2017-12-04T23:02:57',lock_revision=10 WHERE lock_revision=9 AND id=3
+2017-12-04 23:02:57  [839129] UPDATE weapon SET space=21,attack=42,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=4
+2017-12-04 23:02:57  [839129] UPDATE weapon SET space=75,attack=150,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=5
+2017-12-04 23:02:57  [839129] UPDATE item SET space=86,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=1
+2017-12-04 23:02:57  [839129] UPDATE item SET space=39,updated_at='2017-12-04T23:02:57',lock_revision=5 WHERE lock_revision=4 AND id=2
+2017-12-04 23:02:57  [839129] UPDATE item SET space=24,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=3
+2017-12-04 23:02:57  [839129] UPDATE item SET space=13,updated_at='2017-12-04T23:02:57',lock_revision=4 WHERE lock_revision=3 AND id=4
+2017-12-04 23:02:57  [839129] UPDATE place SET lock_revision=2 WHERE lock_revision=1 AND id=1
+2017-12-04 23:02:57  [839129] UPDATE place SET lock_revision=2 WHERE lock_revision=1 AND id=2
+2017-12-04 23:02:57  [839129] UPDATE place SET lock_revision=2 WHERE lock_revision=1 AND id=3
+2017-12-04 23:02:57  [839129] UPDATE place SET lock_revision=2 WHERE lock_revision=1 AND id=4
+2017-12-04 23:02:57  [839129] UPDATE place SET lock_revision=2 WHERE lock_revision=1 AND id=5
+2017-12-04 23:02:57  [839129] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:02:57  [839129] UPDATE player SET space=1,updated_at='2017-12-04T23:02:57',lock_revision=110 WHERE lock_revision=109 AND id=1
+2017-12-04 23:02:57  [839129] [COMMIT] [databaseId:0]
+2017-12-04 23:02:57  [839129] [BEGIN] [databaseId:0]
+2017-12-04 23:02:57  [839129] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:02:57  [839129] UPDATE player SET space=5,lock_revision=111 WHERE lock_revision=110 AND id=1
+2017-12-04 23:02:57  [839129] [COMMIT] [databaseId:0]
+2017-12-04 23:04:24  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:04:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:04:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:04:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:24  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:04:24  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:04:24  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:04:24  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=16 WHERE lock_revision=15 AND id=1
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=2
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=14 WHERE lock_revision=13 AND id=3
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=7 WHERE lock_revision=6 AND id=4
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=7 WHERE lock_revision=6 AND id=5
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=6
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=11 WHERE lock_revision=10 AND id=7
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=8
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=14 WHERE lock_revision=13 AND id=9
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=10
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=8 WHERE lock_revision=7 AND id=11
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=7 WHERE lock_revision=6 AND id=12
+2017-12-04 23:04:24  [842248] UPDATE monster SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=13
+2017-12-04 23:04:24  [842248] UPDATE weapon SET updated_at='2017-12-04T23:04:24',lock_revision=8 WHERE lock_revision=7 AND id=1
+2017-12-04 23:04:24  [842248] UPDATE weapon SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=2
+2017-12-04 23:04:24  [842248] UPDATE weapon SET updated_at='2017-12-04T23:04:24',lock_revision=11 WHERE lock_revision=10 AND id=3
+2017-12-04 23:04:24  [842248] UPDATE weapon SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=4
+2017-12-04 23:04:24  [842248] UPDATE weapon SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=5
+2017-12-04 23:04:24  [842248] UPDATE item SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=1
+2017-12-04 23:04:24  [842248] UPDATE item SET updated_at='2017-12-04T23:04:24',lock_revision=6 WHERE lock_revision=5 AND id=2
+2017-12-04 23:04:24  [842248] UPDATE item SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=3
+2017-12-04 23:04:24  [842248] UPDATE item SET updated_at='2017-12-04T23:04:24',lock_revision=5 WHERE lock_revision=4 AND id=4
+2017-12-04 23:04:24  [842248] UPDATE place SET updated_at='2017-12-04T23:04:24',lock_revision=3 WHERE lock_revision=2 AND id=1
+2017-12-04 23:04:24  [842248] UPDATE place SET updated_at='2017-12-04T23:04:24',lock_revision=3 WHERE lock_revision=2 AND id=2
+2017-12-04 23:04:24  [842248] UPDATE place SET updated_at='2017-12-04T23:04:24',lock_revision=3 WHERE lock_revision=2 AND id=3
+2017-12-04 23:04:24  [842248] UPDATE place SET updated_at='2017-12-04T23:04:24',lock_revision=3 WHERE lock_revision=2 AND id=4
+2017-12-04 23:04:24  [842248] UPDATE place SET updated_at='2017-12-04T23:04:24',lock_revision=3 WHERE lock_revision=2 AND id=5
+2017-12-04 23:04:24  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:24  [842248] UPDATE player SET space=1,updated_at='2017-12-04T23:04:24',lock_revision=112 WHERE lock_revision=111 AND id=1
+2017-12-04 23:04:24  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:24  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:24  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:24  [842248] UPDATE player SET space=5,lock_revision=113 WHERE lock_revision=112 AND id=1
+2017-12-04 23:04:24  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:33  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:33  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:33  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:04:33  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:04:33  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:04:33  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:33  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:04:33  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:04:33  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:04:33  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:33  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:33  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:33  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:33  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:33  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:33  [842248] UPDATE player SET alignment='evil',updated_at='2017-12-04T23:04:33',lock_revision=114 WHERE lock_revision=113 AND id=1
+2017-12-04 23:04:33  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:41  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:41  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:41  [842248] UPDATE player SET space=8,updated_at='2017-12-04T23:04:41',lock_revision=115 WHERE lock_revision=114 AND id=1
+2017-12-04 23:04:41  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:43  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:43  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:04:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:04:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:04:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:43  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:04:43  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:04:43  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:04:43  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:43  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:43  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:43  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:43  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:43  [842248] UPDATE player SET hp=80,updated_at='2017-12-04T23:04:43',lock_revision=116 WHERE lock_revision=115 AND id=1
+2017-12-04 23:04:43  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:49  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:49  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:49  [842248] UPDATE player SET space=9,updated_at='2017-12-04T23:04:49',lock_revision=117 WHERE lock_revision=116 AND id=1
+2017-12-04 23:04:49  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:50  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:50  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:04:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:04:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:04:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:50  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:04:50  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:04:50  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:04:50  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:50  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:52  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:52  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:52  [842248] UPDATE player SET space=13,updated_at='2017-12-04T23:04:52',lock_revision=118 WHERE lock_revision=117 AND id=1
+2017-12-04 23:04:52  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:53  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:53  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:04:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:04:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:04:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:53  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:04:53  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:04:53  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:04:53  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:53  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:53  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:53  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:04:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:04:53  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:04:53  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:04:53  [842248] UPDATE item SET space=1,updated_at='2017-12-04T23:04:53',lock_revision=6 WHERE lock_revision=5 AND id=4
+2017-12-04 23:04:53  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:57  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:57  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:57  [842248] UPDATE player SET space=17,updated_at='2017-12-04T23:04:57',lock_revision=119 WHERE lock_revision=118 AND id=1
+2017-12-04 23:04:57  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:58  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:58  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:58  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:04:58  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:04:58  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:04:58  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:04:58  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:04:58  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:04:58  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:04:58  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:04:58  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:04:59  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:04:59  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:04:59  [842248] UPDATE player SET space=23,updated_at='2017-12-04T23:04:59',lock_revision=120 WHERE lock_revision=119 AND id=1
+2017-12-04 23:04:59  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:00  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:00  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:00  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:00  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:00  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:00  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:00  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:00  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:00  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:00  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:00  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:01  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:01  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:01  [842248] UPDATE player SET space=26,updated_at='2017-12-04T23:05:01',lock_revision=121 WHERE lock_revision=120 AND id=1
+2017-12-04 23:05:01  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:02  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:02  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:02  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:02  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:02  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:02  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:02  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:02  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:02  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:02  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:02  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:03  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:03  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:03  [842248] UPDATE player SET space=32,updated_at='2017-12-04T23:05:03',lock_revision=122 WHERE lock_revision=121 AND id=1
+2017-12-04 23:05:03  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:05  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:05  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:05  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:05  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:05  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:05  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:05  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:06  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:06  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:06  [842248] UPDATE player SET space=35,updated_at='2017-12-04T23:05:06',lock_revision=123 WHERE lock_revision=122 AND id=1
+2017-12-04 23:05:06  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:07  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:07  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:07  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:07  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:07  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:07  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:07  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:08  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:08  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:08  [842248] UPDATE player SET space=37,updated_at='2017-12-04T23:05:08',lock_revision=124 WHERE lock_revision=123 AND id=1
+2017-12-04 23:05:08  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:09  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:09  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:09  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:09  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:09  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:09  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:09  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:09  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:09  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:09  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:09  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:11  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:11  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:11  [842248] UPDATE player SET space=41,updated_at='2017-12-04T23:05:11',lock_revision=125 WHERE lock_revision=124 AND id=1
+2017-12-04 23:05:11  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:14  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:14  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:14  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:14  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:14  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:14  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:14  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:14  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:14  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:14  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:14  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:15  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:15  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:15  [842248] UPDATE player SET space=42,updated_at='2017-12-04T23:05:15',lock_revision=126 WHERE lock_revision=125 AND id=1
+2017-12-04 23:05:15  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:17  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:17  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:17  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:17  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:17  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:17  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:17  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:17  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:17  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:17  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:17  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:18  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:18  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:18  [842248] UPDATE player SET space=43,updated_at='2017-12-04T23:05:18',lock_revision=127 WHERE lock_revision=126 AND id=1
+2017-12-04 23:05:18  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:19  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:19  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:19  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:19  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:19  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:19  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:19  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:19  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:19  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:19  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:19  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:20  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:20  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:20  [842248] UPDATE player SET space=49,updated_at='2017-12-04T23:05:20',lock_revision=128 WHERE lock_revision=127 AND id=1
+2017-12-04 23:05:20  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:21  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:21  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:21  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:21  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:21  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:21  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:21  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:21  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:21  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:21  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:21  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:22  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:22  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:22  [842248] UPDATE player SET space=55,updated_at='2017-12-04T23:05:22',lock_revision=129 WHERE lock_revision=128 AND id=1
+2017-12-04 23:05:22  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:23  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:23  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:23  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:23  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:23  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:23  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:23  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:23  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:23  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:23  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:23  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:24  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:24  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:24  [842248] UPDATE player SET space=61,updated_at='2017-12-04T23:05:24',lock_revision=130 WHERE lock_revision=129 AND id=1
+2017-12-04 23:05:24  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:25  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:25  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:25  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:25  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:25  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:25  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:25  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:25  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:25  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:25  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:25  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:26  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:26  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:26  [842248] UPDATE player SET space=65,updated_at='2017-12-04T23:05:26',lock_revision=131 WHERE lock_revision=130 AND id=1
+2017-12-04 23:05:26  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:27  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:27  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:27  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:27  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:27  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:27  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:27  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:27  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:27  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:27  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:27  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:28  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:28  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:28  [842248] UPDATE player SET space=69,updated_at='2017-12-04T23:05:28',lock_revision=132 WHERE lock_revision=131 AND id=1
+2017-12-04 23:05:28  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:29  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:29  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:29  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:29  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:29  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:29  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:29  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:29  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:29  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:29  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:29  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:30  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:30  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:30  [842248] UPDATE player SET space=72,updated_at='2017-12-04T23:05:30',lock_revision=133 WHERE lock_revision=132 AND id=1
+2017-12-04 23:05:30  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:31  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:31  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:31  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:31  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:31  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:31  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:31  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:31  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:31  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:31  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:31  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:31  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:31  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:31  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:31  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:31  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:36  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:36  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:36  [842248] UPDATE player SET space=77,updated_at='2017-12-04T23:05:36',lock_revision=134 WHERE lock_revision=133 AND id=1
+2017-12-04 23:05:36  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:38  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:38  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:38  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:38  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:38  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:38  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:38  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:38  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:38  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:38  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:38  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:39  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:39  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:39  [842248] UPDATE player SET space=79,updated_at='2017-12-04T23:05:39',lock_revision=135 WHERE lock_revision=134 AND id=1
+2017-12-04 23:05:39  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:41  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:41  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:41  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:41  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:41  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:41  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:41  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:41  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:41  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:41  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:41  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:44  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:44  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:44  [842248] UPDATE player SET space=82,updated_at='2017-12-04T23:05:44',lock_revision=136 WHERE lock_revision=135 AND id=1
+2017-12-04 23:05:44  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:45  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:45  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:45  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:45  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:45  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:45  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:45  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:45  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:45  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:45  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:45  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:47  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:47  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:47  [842248] UPDATE player SET space=85,updated_at='2017-12-04T23:05:47',lock_revision=137 WHERE lock_revision=136 AND id=1
+2017-12-04 23:05:47  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:48  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:48  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:48  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:48  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:48  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:48  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:48  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:48  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:48  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:48  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:48  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:49  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:49  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:49  [842248] UPDATE player SET space=86,updated_at='2017-12-04T23:05:49',lock_revision=138 WHERE lock_revision=137 AND id=1
+2017-12-04 23:05:49  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:51  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:51  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:51  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:51  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:51  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:51  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:51  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:51  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:51  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:51  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:51  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:51  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:51  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:51  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:51  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:51  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:51  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:51  [842248] UPDATE item SET space=1,updated_at='2017-12-04T23:05:51',lock_revision=6 WHERE lock_revision=5 AND id=1
+2017-12-04 23:05:51  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:52  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:52  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:52  [842248] UPDATE player SET space=88,updated_at='2017-12-04T23:05:52',lock_revision=139 WHERE lock_revision=138 AND id=1
+2017-12-04 23:05:52  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:53  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:53  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:53  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:53  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:53  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:53  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:53  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:53  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:54  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:54  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:54  [842248] UPDATE player SET space=89,updated_at='2017-12-04T23:05:54',lock_revision=140 WHERE lock_revision=139 AND id=1
+2017-12-04 23:05:54  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:55  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:55  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:55  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:55  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:05:55  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:05:55  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:05:55  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:55  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:05:55  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:05:55  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:05:55  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:05:55  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:05:55  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:05:55  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:05:55  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:05:55  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:00  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:00  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:00  [842248] UPDATE player SET space=94,updated_at='2017-12-04T23:06:00',lock_revision=141 WHERE lock_revision=140 AND id=1
+2017-12-04 23:06:00  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:01  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:01  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:01  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:01  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:01  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:01  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:01  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:01  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:01  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:01  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:01  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:02  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:02  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:02  [842248] UPDATE player SET space=96,updated_at='2017-12-04T23:06:02',lock_revision=142 WHERE lock_revision=141 AND id=1
+2017-12-04 23:06:02  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:03  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:03  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:03  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:03  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:03  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:03  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:03  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:03  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:03  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:03  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:03  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:04  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:04  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:04  [842248] UPDATE player SET space=97,updated_at='2017-12-04T23:06:04',lock_revision=143 WHERE lock_revision=142 AND id=1
+2017-12-04 23:06:04  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:05  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:05  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:05  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:05  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:05  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:05  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:05  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:05  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:06  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:06  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:06  [842248] UPDATE player SET space=103,updated_at='2017-12-04T23:06:06',lock_revision=144 WHERE lock_revision=143 AND id=1
+2017-12-04 23:06:06  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:07  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:07  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:07  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:07  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:07  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:07  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:07  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:07  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:07  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:07  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:07  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:07  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:13  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:13  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:13  [842248] UPDATE player SET space=108,updated_at='2017-12-04T23:06:13',lock_revision=145 WHERE lock_revision=144 AND id=1
+2017-12-04 23:06:13  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:15  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:15  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:15  [842248] UPDATE player SET space=113,updated_at='2017-12-04T23:06:15',lock_revision=146 WHERE lock_revision=145 AND id=1
+2017-12-04 23:06:15  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:16  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:16  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:16  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:16  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:16  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:16  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:16  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:16  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:16  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:16  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:16  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:17  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:17  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:17  [842248] UPDATE player SET space=114,updated_at='2017-12-04T23:06:17',lock_revision=147 WHERE lock_revision=146 AND id=1
+2017-12-04 23:06:17  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:18  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:18  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:18  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:18  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:18  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:18  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:18  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:18  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:18  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:18  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:18  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:19  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:19  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:19  [842248] UPDATE player SET space=119,updated_at='2017-12-04T23:06:19',lock_revision=148 WHERE lock_revision=147 AND id=1
+2017-12-04 23:06:19  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:20  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:20  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:20  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:20  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:20  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:20  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:20  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:20  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:20  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:20  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:20  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:21  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:21  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:21  [842248] UPDATE player SET space=121,updated_at='2017-12-04T23:06:21',lock_revision=149 WHERE lock_revision=148 AND id=1
+2017-12-04 23:06:21  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:22  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:22  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:22  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:22  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:22  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:22  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:22  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:22  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:22  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:22  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:22  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:23  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:23  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:23  [842248] UPDATE player SET space=126,updated_at='2017-12-04T23:06:23',lock_revision=150 WHERE lock_revision=149 AND id=1
+2017-12-04 23:06:23  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:24  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:24  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:24  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:24  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:24  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:24  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:24  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:24  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:25  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:25  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:25  [842248] UPDATE player SET space=131,updated_at='2017-12-04T23:06:25',lock_revision=151 WHERE lock_revision=150 AND id=1
+2017-12-04 23:06:25  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:26  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:26  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:26  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:26  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:26  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:26  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:26  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:26  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:26  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:26  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:26  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:27  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:27  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:27  [842248] UPDATE player SET space=133,updated_at='2017-12-04T23:06:27',lock_revision=152 WHERE lock_revision=151 AND id=1
+2017-12-04 23:06:27  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:28  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:28  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:28  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:28  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:28  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:28  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:28  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:28  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:28  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:28  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:28  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:28  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:28  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:28  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:28  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:28  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:32  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:32  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:32  [842248] UPDATE player SET space=137,updated_at='2017-12-04T23:06:32',lock_revision=153 WHERE lock_revision=152 AND id=1
+2017-12-04 23:06:32  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:39  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:39  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:39  [842248] UPDATE player SET space=141,updated_at='2017-12-04T23:06:39',lock_revision=154 WHERE lock_revision=153 AND id=1
+2017-12-04 23:06:39  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:43  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:43  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:43  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:43  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:43  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:43  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:43  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:43  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:44  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:44  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:44  [842248] UPDATE player SET space=146,updated_at='2017-12-04T23:06:44',lock_revision=155 WHERE lock_revision=154 AND id=1
+2017-12-04 23:06:44  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:50  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:06:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:06:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:06:50  [842248] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:06:50  [842248] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:06:50  [842248] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:06:50  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:06:50  [842248] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=20,hp=6,attack=10,updated_at='2017-12-04T23:06:50',lock_revision=17 WHERE lock_revision=16 AND id=1
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=75,hp=23,attack=38,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=2
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=21,hp=6,attack=11,updated_at='2017-12-04T23:06:50',lock_revision=15 WHERE lock_revision=14 AND id=3
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=28,hp=8,attack=14,updated_at='2017-12-04T23:06:50',lock_revision=8 WHERE lock_revision=7 AND id=4
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=141,hp=42,attack=71,updated_at='2017-12-04T23:06:50',lock_revision=8 WHERE lock_revision=7 AND id=5
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=104,hp=31,attack=52,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=6
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=50,hp=15,attack=25,updated_at='2017-12-04T23:06:50',lock_revision=12 WHERE lock_revision=11 AND id=7
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=93,hp=28,attack=47,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=8
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=74,hp=22,attack=37,updated_at='2017-12-04T23:06:50',lock_revision=15 WHERE lock_revision=14 AND id=9
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=71,hp=21,attack=36,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=10
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=136,hp=41,attack=68,updated_at='2017-12-04T23:06:50',lock_revision=9 WHERE lock_revision=8 AND id=11
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=87,hp=26,attack=44,updated_at='2017-12-04T23:06:50',lock_revision=8 WHERE lock_revision=7 AND id=12
+2017-12-04 23:06:50  [842248] UPDATE monster SET space=97,hp=29,attack=49,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=13
+2017-12-04 23:06:50  [842248] UPDATE weapon SET space=31,attack=62,updated_at='2017-12-04T23:06:50',lock_revision=9 WHERE lock_revision=8 AND id=1
+2017-12-04 23:06:50  [842248] UPDATE weapon SET space=139,attack=278,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=2
+2017-12-04 23:06:50  [842248] UPDATE weapon SET space=65,attack=130,updated_at='2017-12-04T23:06:50',lock_revision=12 WHERE lock_revision=11 AND id=3
+2017-12-04 23:06:50  [842248] UPDATE weapon SET space=125,attack=250,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=4
+2017-12-04 23:06:50  [842248] UPDATE weapon SET space=108,attack=216,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=5
+2017-12-04 23:06:50  [842248] UPDATE item SET space=38,updated_at='2017-12-04T23:06:50',lock_revision=7 WHERE lock_revision=6 AND id=1
+2017-12-04 23:06:50  [842248] UPDATE item SET space=42,updated_at='2017-12-04T23:06:50',lock_revision=7 WHERE lock_revision=6 AND id=2
+2017-12-04 23:06:50  [842248] UPDATE item SET space=17,updated_at='2017-12-04T23:06:50',lock_revision=6 WHERE lock_revision=5 AND id=3
+2017-12-04 23:06:50  [842248] UPDATE item SET space=106,updated_at='2017-12-04T23:06:50',lock_revision=7 WHERE lock_revision=6 AND id=4
+2017-12-04 23:06:50  [842248] UPDATE place SET updated_at='2017-12-04T23:06:50',lock_revision=4 WHERE lock_revision=3 AND id=1
+2017-12-04 23:06:50  [842248] UPDATE place SET updated_at='2017-12-04T23:06:50',lock_revision=4 WHERE lock_revision=3 AND id=2
+2017-12-04 23:06:50  [842248] UPDATE place SET updated_at='2017-12-04T23:06:50',lock_revision=4 WHERE lock_revision=3 AND id=3
+2017-12-04 23:06:50  [842248] UPDATE place SET updated_at='2017-12-04T23:06:50',lock_revision=4 WHERE lock_revision=3 AND id=4
+2017-12-04 23:06:50  [842248] UPDATE place SET updated_at='2017-12-04T23:06:50',lock_revision=4 WHERE lock_revision=3 AND id=5
+2017-12-04 23:06:50  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:50  [842248] UPDATE player SET space=1,updated_at='2017-12-04T23:06:50',lock_revision=156 WHERE lock_revision=155 AND id=1
+2017-12-04 23:06:50  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:06:50  [842248] [BEGIN] [databaseId:0]
+2017-12-04 23:06:50  [842248] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:06:50  [842248] UPDATE player SET space=5,lock_revision=157 WHERE lock_revision=156 AND id=1
+2017-12-04 23:06:50  [842248] [COMMIT] [databaseId:0]
+2017-12-04 23:09:36  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:36  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:36  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:36  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:36  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:36  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:36  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:36  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:36  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=72,hp=22,attack=36,updated_at='2017-12-04T23:09:36',lock_revision=18 WHERE lock_revision=17 AND id=1
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=139,hp=42,attack=70,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=2
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=133,hp=40,attack=67,updated_at='2017-12-04T23:09:36',lock_revision=16 WHERE lock_revision=15 AND id=3
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=140,hp=42,attack=70,updated_at='2017-12-04T23:09:36',lock_revision=9 WHERE lock_revision=8 AND id=4
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=89,hp=27,attack=45,updated_at='2017-12-04T23:09:36',lock_revision=9 WHERE lock_revision=8 AND id=5
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=33,hp=10,attack=17,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=6
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=74,hp=22,attack=37,updated_at='2017-12-04T23:09:36',lock_revision=13 WHERE lock_revision=12 AND id=7
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=53,hp=16,attack=27,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=8
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=90,hp=27,attack=45,updated_at='2017-12-04T23:09:36',lock_revision=16 WHERE lock_revision=15 AND id=9
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=103,hp=31,attack=52,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=10
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=120,hp=36,attack=60,updated_at='2017-12-04T23:09:36',lock_revision=10 WHERE lock_revision=9 AND id=11
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=60,hp=18,attack=30,updated_at='2017-12-04T23:09:36',lock_revision=9 WHERE lock_revision=8 AND id=12
+2017-12-04 23:09:36  [851069] UPDATE monster SET space=14,hp=4,attack=7,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=13
+2017-12-04 23:09:36  [851069] UPDATE weapon SET space=7,attack=14,updated_at='2017-12-04T23:09:36',lock_revision=10 WHERE lock_revision=9 AND id=1
+2017-12-04 23:09:36  [851069] UPDATE weapon SET space=112,attack=224,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=2
+2017-12-04 23:09:36  [851069] UPDATE weapon SET space=71,attack=142,updated_at='2017-12-04T23:09:36',lock_revision=13 WHERE lock_revision=12 AND id=3
+2017-12-04 23:09:36  [851069] UPDATE weapon SET space=21,attack=42,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=4
+2017-12-04 23:09:36  [851069] UPDATE weapon SET space=75,attack=150,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=5
+2017-12-04 23:09:36  [851069] UPDATE item SET space=86,updated_at='2017-12-04T23:09:36',lock_revision=8 WHERE lock_revision=7 AND id=1
+2017-12-04 23:09:36  [851069] UPDATE item SET space=39,updated_at='2017-12-04T23:09:36',lock_revision=8 WHERE lock_revision=7 AND id=2
+2017-12-04 23:09:36  [851069] UPDATE item SET space=24,updated_at='2017-12-04T23:09:36',lock_revision=7 WHERE lock_revision=6 AND id=3
+2017-12-04 23:09:36  [851069] UPDATE item SET space=13,updated_at='2017-12-04T23:09:36',lock_revision=8 WHERE lock_revision=7 AND id=4
+2017-12-04 23:09:36  [851069] UPDATE place SET updated_at='2017-12-04T23:09:36',lock_revision=5 WHERE lock_revision=4 AND id=1
+2017-12-04 23:09:36  [851069] UPDATE place SET updated_at='2017-12-04T23:09:36',lock_revision=5 WHERE lock_revision=4 AND id=2
+2017-12-04 23:09:36  [851069] UPDATE place SET updated_at='2017-12-04T23:09:36',lock_revision=5 WHERE lock_revision=4 AND id=3
+2017-12-04 23:09:36  [851069] UPDATE place SET updated_at='2017-12-04T23:09:36',lock_revision=5 WHERE lock_revision=4 AND id=4
+2017-12-04 23:09:36  [851069] UPDATE place SET updated_at='2017-12-04T23:09:36',lock_revision=5 WHERE lock_revision=4 AND id=5
+2017-12-04 23:09:36  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:36  [851069] UPDATE player SET space=1,updated_at='2017-12-04T23:09:36',lock_revision=158 WHERE lock_revision=157 AND id=1
+2017-12-04 23:09:36  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:36  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:36  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:36  [851069] UPDATE player SET space=4,lock_revision=159 WHERE lock_revision=158 AND id=1
+2017-12-04 23:09:36  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:41  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:41  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:41  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:41  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:41  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:41  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:41  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:41  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:41  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:41  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:41  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:42  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:42  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:42  [851069] UPDATE player SET space=8,updated_at='2017-12-04T23:09:42',lock_revision=160 WHERE lock_revision=159 AND id=1
+2017-12-04 23:09:42  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:44  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:44  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:44  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:44  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:44  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:44  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:44  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:44  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:44  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:44  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:44  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:44  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:44  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:44  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:44  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:44  [851069] UPDATE player SET hp=64,updated_at='2017-12-04T23:09:44',lock_revision=161 WHERE lock_revision=160 AND id=1
+2017-12-04 23:09:44  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:46  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:46  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:46  [851069] UPDATE player SET space=11,updated_at='2017-12-04T23:09:46',lock_revision=162 WHERE lock_revision=161 AND id=1
+2017-12-04 23:09:46  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:47  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:47  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:47  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:47  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:47  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:47  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:47  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:47  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:47  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:47  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:47  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:47  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:47  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:47  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:47  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:47  [851069] UPDATE player SET hp=77,updated_at='2017-12-04T23:09:47',lock_revision=163 WHERE lock_revision=162 AND id=1
+2017-12-04 23:09:47  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:49  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:49  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:49  [851069] UPDATE player SET space=13,updated_at='2017-12-04T23:09:49',lock_revision=164 WHERE lock_revision=163 AND id=1
+2017-12-04 23:09:49  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:51  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:51  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:51  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:51  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:51  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:51  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:51  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:51  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:51  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:51  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:51  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:51  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:51  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:51  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:51  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:51  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:51  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:51  [851069] UPDATE item SET space=1,updated_at='2017-12-04T23:09:51',lock_revision=9 WHERE lock_revision=8 AND id=4
+2017-12-04 23:09:51  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:52  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:52  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:52  [851069] UPDATE player SET space=15,updated_at='2017-12-04T23:09:52',lock_revision=165 WHERE lock_revision=164 AND id=1
+2017-12-04 23:09:52  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:54  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:54  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:54  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:54  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:54  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:54  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:54  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:54  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:54  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:54  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:54  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:54  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:54  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:54  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:54  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:54  [851069] UPDATE player SET hp=62,updated_at='2017-12-04T23:09:54',lock_revision=166 WHERE lock_revision=165 AND id=1
+2017-12-04 23:09:54  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:55  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:55  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:55  [851069] UPDATE player SET space=19,updated_at='2017-12-04T23:09:55',lock_revision=167 WHERE lock_revision=166 AND id=1
+2017-12-04 23:09:55  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:56  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:56  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:56  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:56  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:56  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:56  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:56  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:56  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:56  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:56  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:56  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:57  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:57  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:57  [851069] UPDATE player SET space=21,updated_at='2017-12-04T23:09:57',lock_revision=168 WHERE lock_revision=167 AND id=1
+2017-12-04 23:09:57  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:58  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:58  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:58  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:09:58  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:58  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:58  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:09:58  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:09:58  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:58  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:58  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:09:58  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:09:58  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:09:58  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:09:58  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:09:58  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:09:58  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:09:58  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:09:58  [851069] UPDATE weapon SET equipped='true',updated_at='2017-12-04T23:09:58',lock_revision=8 WHERE lock_revision=7 AND id=4
+2017-12-04 23:09:58  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:01  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:01  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:01  [851069] UPDATE player SET space=26,updated_at='2017-12-04T23:10:01',lock_revision=169 WHERE lock_revision=168 AND id=1
+2017-12-04 23:10:01  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:02  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:02  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:02  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:02  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:02  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:02  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:02  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:02  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:02  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:02  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:02  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:03  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:03  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:03  [851069] UPDATE player SET space=27,updated_at='2017-12-04T23:10:03',lock_revision=170 WHERE lock_revision=169 AND id=1
+2017-12-04 23:10:03  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:04  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:04  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:04  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:04  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:04  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:04  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:04  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:04  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:04  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:04  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:04  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:05  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:05  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:05  [851069] UPDATE player SET space=31,updated_at='2017-12-04T23:10:05',lock_revision=171 WHERE lock_revision=170 AND id=1
+2017-12-04 23:10:05  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:06  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:06  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:06  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:06  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:06  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:06  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:06  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:06  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:06  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:06  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:06  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:07  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:07  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:07  [851069] UPDATE player SET space=33,updated_at='2017-12-04T23:10:07',lock_revision=172 WHERE lock_revision=171 AND id=1
+2017-12-04 23:10:07  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:08  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:08  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:08  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:08  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:08  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:08  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:08  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:08  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:08  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:08  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:08  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:08  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:08  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:08  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:08  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:08  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:12  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:12  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:12  [851069] UPDATE player SET space=39,updated_at='2017-12-04T23:10:12',lock_revision=173 WHERE lock_revision=172 AND id=1
+2017-12-04 23:10:12  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:13  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:13  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:13  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:13  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:13  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:13  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:13  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:13  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:13  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:13  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:13  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:13  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:13  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:13  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:13  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:13  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:13  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:13  [851069] UPDATE item SET space=1,updated_at='2017-12-04T23:10:13',lock_revision=9 WHERE lock_revision=8 AND id=2
+2017-12-04 23:10:13  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:14  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:14  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:14  [851069] UPDATE player SET space=42,updated_at='2017-12-04T23:10:14',lock_revision=174 WHERE lock_revision=173 AND id=1
+2017-12-04 23:10:14  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:15  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:15  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:15  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:15  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:15  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:15  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:15  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:15  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:15  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:15  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:15  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:16  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:16  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:16  [851069] UPDATE player SET space=47,updated_at='2017-12-04T23:10:16',lock_revision=175 WHERE lock_revision=174 AND id=1
+2017-12-04 23:10:16  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:17  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:17  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:17  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:17  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:17  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:17  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:17  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:17  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:17  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:17  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:17  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:18  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:18  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:18  [851069] UPDATE player SET space=50,updated_at='2017-12-04T23:10:18',lock_revision=176 WHERE lock_revision=175 AND id=1
+2017-12-04 23:10:18  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:19  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:19  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:19  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:19  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:19  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:19  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:19  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:19  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:19  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:19  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:19  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:20  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:20  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:20  [851069] UPDATE player SET space=56,updated_at='2017-12-04T23:10:20',lock_revision=177 WHERE lock_revision=176 AND id=1
+2017-12-04 23:10:20  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:21  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:21  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:21  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:21  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:21  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:21  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:21  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:21  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:21  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:21  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:21  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:22  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:22  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:22  [851069] UPDATE player SET space=59,updated_at='2017-12-04T23:10:22',lock_revision=178 WHERE lock_revision=177 AND id=1
+2017-12-04 23:10:22  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:23  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:23  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:23  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:23  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:23  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:23  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:23  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:23  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:23  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:23  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:23  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:24  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:24  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:24  [851069] UPDATE player SET space=64,updated_at='2017-12-04T23:10:24',lock_revision=179 WHERE lock_revision=178 AND id=1
+2017-12-04 23:10:24  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:25  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:25  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:25  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:25  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:25  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:25  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:25  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:25  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:25  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:25  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:25  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:26  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:26  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:26  [851069] UPDATE player SET space=66,updated_at='2017-12-04T23:10:26',lock_revision=180 WHERE lock_revision=179 AND id=1
+2017-12-04 23:10:26  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:27  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:27  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:27  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:27  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:27  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:27  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:27  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:27  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:27  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:27  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:27  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:28  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:28  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:28  [851069] UPDATE player SET space=71,updated_at='2017-12-04T23:10:28',lock_revision=181 WHERE lock_revision=180 AND id=1
+2017-12-04 23:10:28  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:29  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:29  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:29  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:29  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:29  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:29  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:29  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:29  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:29  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:29  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:29  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:29  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:29  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:29  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:29  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:29  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:29  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:29  [851069] UPDATE weapon SET equipped='true',updated_at='2017-12-04T23:10:29',lock_revision=14 WHERE lock_revision=13 AND id=3
+2017-12-04 23:10:29  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:30  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:30  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:30  [851069] UPDATE player SET space=75,updated_at='2017-12-04T23:10:30',lock_revision=182 WHERE lock_revision=181 AND id=1
+2017-12-04 23:10:30  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:31  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:31  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:31  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:31  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:31  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:31  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:31  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:31  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:31  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:31  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:31  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:31  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:31  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:31  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:31  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:31  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:31  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:31  [851069] UPDATE weapon SET equipped='true',updated_at='2017-12-04T23:10:31',lock_revision=8 WHERE lock_revision=7 AND id=5
+2017-12-04 23:10:31  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:32  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:32  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:32  [851069] UPDATE player SET space=80,updated_at='2017-12-04T23:10:32',lock_revision=183 WHERE lock_revision=182 AND id=1
+2017-12-04 23:10:32  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:33  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:33  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:33  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:33  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:33  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:33  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:33  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:33  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:33  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:33  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:33  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:34  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:34  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:34  [851069] UPDATE player SET space=85,updated_at='2017-12-04T23:10:34',lock_revision=184 WHERE lock_revision=183 AND id=1
+2017-12-04 23:10:34  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:35  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:35  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:35  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:35  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:35  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:35  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:35  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:35  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:35  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:35  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:35  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:36  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:36  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:36  [851069] UPDATE player SET space=90,updated_at='2017-12-04T23:10:36',lock_revision=185 WHERE lock_revision=184 AND id=1
+2017-12-04 23:10:36  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:37  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:37  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:37  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:37  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:37  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:37  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:37  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:37  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:37  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:37  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:37  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:37  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:37  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:37  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:37  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:37  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:40  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:40  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:40  [851069] UPDATE player SET space=95,updated_at='2017-12-04T23:10:40',lock_revision=186 WHERE lock_revision=185 AND id=1
+2017-12-04 23:10:40  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:42  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:42  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:42  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:42  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:42  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:42  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:42  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:42  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:42  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:42  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:42  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:43  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:43  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:43  [851069] UPDATE player SET space=96,updated_at='2017-12-04T23:10:43',lock_revision=187 WHERE lock_revision=186 AND id=1
+2017-12-04 23:10:43  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:43  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:43  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:43  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:43  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:43  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:43  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:43  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:43  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:43  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:43  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:43  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:44  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:44  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:44  [851069] UPDATE player SET space=101,updated_at='2017-12-04T23:10:44',lock_revision=188 WHERE lock_revision=187 AND id=1
+2017-12-04 23:10:44  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:45  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:45  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:45  [851069] SELECT COUNT(*) FROM (SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0) t
+2017-12-04 23:10:45  [851069] SELECT COUNT(*) FROM (SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0) t
+2017-12-04 23:10:45  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0) t
+2017-12-04 23:10:45  [851069] SELECT COUNT(*) FROM (SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0) t
+2017-12-04 23:10:45  [851069] SELECT "id","space","hp","attack","name","battle","url","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-12-04 23:10:45  [851069] SELECT "id","space","attack","name","equipped","main","url","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-12-04 23:10:45  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "item" t0
+2017-12-04 23:10:45  [851069] SELECT "id","space","name","url","created_at","updated_at","lock_revision" FROM "place" t0
+2017-12-04 23:10:45  [851069] [COMMIT] [databaseId:0]
+2017-12-04 23:10:46  [851069] [BEGIN] [databaseId:0]
+2017-12-04 23:10:46  [851069] SELECT "id","hp","xp","space","alignment","name","created_at","updated_at","lock_revision" FROM "player" t0 WHERE t0."id"=1 LIMIT 1
+2017-12-04 23:10:46  [851069] UPDATE player SET space=103,updated_at='2017-12-04T23:10:46',lock_revision=189 WHERE lock_revision=188 AND id=1
+2017-12-04 23:10:46  [851069] [COMMIT] [databaseId:0]

@@ -20,6 +20,7 @@
 //27 dragon
 std::array<int, 98> things_to_map = {{ 2, 3, 4,  6, 7, 9,10,  12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25,  28, 29, 31, 32, 33, 35, 36, 38, 39,  41, 42, 43, 45, 46, 48, 49, 50,  52, 53, 54,  57, 58,  60, 61, 62,  64, 65,  67, 68,  70, 71, 72,  74, 75,  77, 79, 79,  81, 82, 83,  86, 87,  89, 90, 91, 93, 94,  96, 97, 99, 100, 101,  103, 104,  106, 107, 108, 110, 111, 112,   115, 116, 118, 119, 120,  122, 123,  125, 126, 128,129, 130, 132, 133, 135, 136, 137, 139, 140, 141}};
 
+
 int my_random(int i) { return rand() % i; }
 int dice;
 void GameController::index()
@@ -42,37 +43,38 @@ void GameController::welcome()
 }
 
 void GameController::reboot(){
+    srand(time(NULL));
     //erase
-    PlaceObject Cathedral1;
-    Cathedral1.space = 8;
-    Cathedral1.name ="Cathedral1";
-    Cathedral1.url = "https://image.flaticon.com/icons/png/128/444/444678.png";
-    Cathedral1.create();
-    PlaceObject Cathedral2;
-    Cathedral2.space = 15;
-    Cathedral2.name ="Cathedral2";
-    Cathedral2.url = "https://image.flaticon.com/icons/png/128/444/444678.png";
-    Cathedral2.create();
-    PlaceObject Graveyard1;
-    Graveyard1.space = 11;
-    Graveyard1.name ="Graveyard1";
-    Graveyard1.url = "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png";
-    Graveyard1.create();
-    PlaceObject Graveyard2;
-    Graveyard2.space = 22;
-    Graveyard2.name ="Graveyard2";
-    Graveyard2.url = "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png";
-    Graveyard2.create();
-    PlaceObject Well1;
-    Well1.space = 5;
-    Well1.name ="Well1";
-    Well1.url = "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg";
-    Well1.create();
-    PlaceObject Well2;
-    Well2.space = 18;
-    Well2.name ="Well2";
-    Well2.url = "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg";
-    Well2.create();
+    // PlaceObject Cathedral1;
+    // Cathedral1.space = 8;
+    // Cathedral1.name ="Cathedral1";
+    // Cathedral1.url = "https://image.flaticon.com/icons/png/128/444/444678.png";
+    // Cathedral1.create();
+    // PlaceObject Cathedral2;
+    // Cathedral2.space = 15;
+    // Cathedral2.name ="Cathedral2";
+    // Cathedral2.url = "https://image.flaticon.com/icons/png/128/444/444678.png";
+    // Cathedral2.create();
+    // PlaceObject Graveyard1;
+    // Graveyard1.space = 11;
+    // Graveyard1.name ="Graveyard1";
+    // Graveyard1.url = "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png";
+    // Graveyard1.create();
+    // PlaceObject Graveyard2;
+    // Graveyard2.space = 22;
+    // Graveyard2.name ="Graveyard2";
+    // Graveyard2.url = "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png";
+    // Graveyard2.create();
+    // PlaceObject Well1;
+    // Well1.space = 5;
+    // Well1.name ="Well1";
+    // Well1.url = "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg";
+    // Well1.create();
+    // PlaceObject Well2;
+    // Well2.space = 18;
+    // Well2.name ="Well2";
+    // Well2.url = "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg";
+    // Well2.create();
 
     int monster_length = Monster::count();
     int weapon_length = Weapon::count();
@@ -480,7 +482,7 @@ for (int i=0; i < place_length -1; i++) {
 }
 
 
-else if (mfound == true){
+if (mfound == true){
     redirect( urla("battle") );
 }
 else if (wfound == true){
@@ -501,10 +503,10 @@ else  {
 
 
 }
-void GemeController::reserved_space(){
+void GameController::reserved_space(){
     Player current_player = Player::get(1);
     int current_space =  current_player.space();
-    std::string alignment = current_player.alignment();
+    QString alignment = current_player.alignment();
 
     int place_length = Place::count();
 
@@ -512,7 +514,7 @@ void GemeController::reserved_space(){
 
     for (int i=0; i < place_length -1; i++) {
         if (places[i].space() == current_player.space()) {
-            if (places[i].url == "https://image.flaticon.com/icons/png/128/444/444678.png"{
+            if (places[i].url() == "https://image.flaticon.com/icons/png/128/444/444678.png"){
                 if(alignment == "good"){
 
                     current_player.setHp(round(current_player.hp() * 1.20));
@@ -524,7 +526,7 @@ void GemeController::reserved_space(){
 
                 }
             }
-            else if(places[i].url == "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png"){
+            else if(places[i].url() == "http://www.iconninja.com/files/865/378/369/graveyard-rip-icon.png"){
                 if(alignment == "evil"){
 
                     current_player.setHp(round(current_player.hp() * 1.20));
@@ -537,7 +539,7 @@ void GemeController::reserved_space(){
                 }
 
             }
-            else if(places[i].url == "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg"){
+            else if(places[i].url() == "http://www.clker.com/cliparts/h/m/M/e/M/B/the-well.svg"){
                 current_player.setXp(round(current_player.xp() * 1.02));
                 if (alignment == "good") {
                     current_player.setAlignment("evil");
@@ -552,14 +554,18 @@ void GemeController::reserved_space(){
 
 
 
-            // redirect( urla("equip_option") );
+            QString name = places[i].name();
+            QString url = places[i].url();
+            texport(name);
+            texport(url);
+
         }
     }
 
 
 
 
-    render()
+    render();
 }
 void GameController::nada() {
     render();
@@ -621,7 +627,7 @@ void GameController::staging() {
 void GameController::battle()
 {
     Player current_player = Player::get(1);
-    int current_player_space = current_player.space();
+
     int monster_length = Monster::count();
     QList<Monster> monsters =  Monster::getAll();
     for (int i=0; i < monster_length -1; i++) {

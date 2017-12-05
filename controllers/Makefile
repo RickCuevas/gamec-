@@ -55,24 +55,28 @@ SOURCES       = applicationcontroller.cpp \
 		itemcontroller.cpp \
 		monstercontroller.cpp \
 		playercontroller.cpp \
-		weaponcontroller.cpp .obj/moc_applicationcontroller.cpp \
+		weaponcontroller.cpp \
+		placecontroller.cpp .obj/moc_applicationcontroller.cpp \
 		.obj/moc_gamecontroller.cpp \
 		.obj/moc_itemcontroller.cpp \
 		.obj/moc_monstercontroller.cpp \
 		.obj/moc_playercontroller.cpp \
-		.obj/moc_weaponcontroller.cpp
+		.obj/moc_weaponcontroller.cpp \
+		.obj/moc_placecontroller.cpp
 OBJECTS       = .obj/applicationcontroller.o \
 		.obj/gamecontroller.o \
 		.obj/itemcontroller.o \
 		.obj/monstercontroller.o \
 		.obj/playercontroller.o \
 		.obj/weaponcontroller.o \
+		.obj/placecontroller.o \
 		.obj/moc_applicationcontroller.o \
 		.obj/moc_gamecontroller.o \
 		.obj/moc_itemcontroller.o \
 		.obj/moc_monstercontroller.o \
 		.obj/moc_playercontroller.o \
-		.obj/moc_weaponcontroller.o
+		.obj/moc_weaponcontroller.o \
+		.obj/moc_placecontroller.o
 DIST          = /usr/local/Cellar/qt/5.9.2/mkspecs/features/spec_pre.prf \
 		/usr/local/Cellar/qt/5.9.2/mkspecs/qdevice.pri \
 		/usr/local/Cellar/qt/5.9.2/mkspecs/features/device_config.prf \
@@ -261,12 +265,14 @@ DIST          = /usr/local/Cellar/qt/5.9.2/mkspecs/features/spec_pre.prf \
 		itemcontroller.h \
 		monstercontroller.h \
 		playercontroller.h \
-		weaponcontroller.h applicationcontroller.cpp \
+		weaponcontroller.h \
+		placecontroller.h applicationcontroller.cpp \
 		gamecontroller.cpp \
 		itemcontroller.cpp \
 		monstercontroller.cpp \
 		playercontroller.cpp \
-		weaponcontroller.cpp
+		weaponcontroller.cpp \
+		placecontroller.cpp
 QMAKE_TARGET  = controller
 DESTDIR       = ../lib/
 TARGET        = libcontroller.1.0.0.dylib
@@ -704,8 +710,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/Cellar/qt/5.9.2/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents applicationcontroller.h gamecontroller.h itemcontroller.h monstercontroller.h playercontroller.h weaponcontroller.h $(DISTDIR)/
-	$(COPY_FILE) --parents applicationcontroller.cpp gamecontroller.cpp itemcontroller.cpp monstercontroller.cpp playercontroller.cpp weaponcontroller.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents applicationcontroller.h gamecontroller.h itemcontroller.h monstercontroller.h playercontroller.h weaponcontroller.h placecontroller.h $(DISTDIR)/
+	$(COPY_FILE) --parents applicationcontroller.cpp gamecontroller.cpp itemcontroller.cpp monstercontroller.cpp playercontroller.cpp weaponcontroller.cpp placecontroller.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -737,9 +743,9 @@ compiler_moc_predefs_clean:
 .obj/moc_predefs.h: /usr/local/Cellar/qt/5.9.2/mkspecs/features/data/dummy.cpp
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++11 $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -mmacosx-version-min=10.10 -Wall -W -dM -E -o .obj/moc_predefs.h /usr/local/Cellar/qt/5.9.2/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: .obj/moc_applicationcontroller.cpp .obj/moc_gamecontroller.cpp .obj/moc_itemcontroller.cpp .obj/moc_monstercontroller.cpp .obj/moc_playercontroller.cpp .obj/moc_weaponcontroller.cpp
+compiler_moc_header_make_all: .obj/moc_applicationcontroller.cpp .obj/moc_gamecontroller.cpp .obj/moc_itemcontroller.cpp .obj/moc_monstercontroller.cpp .obj/moc_playercontroller.cpp .obj/moc_weaponcontroller.cpp .obj/moc_placecontroller.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) .obj/moc_applicationcontroller.cpp .obj/moc_gamecontroller.cpp .obj/moc_itemcontroller.cpp .obj/moc_monstercontroller.cpp .obj/moc_playercontroller.cpp .obj/moc_weaponcontroller.cpp
+	-$(DEL_FILE) .obj/moc_applicationcontroller.cpp .obj/moc_gamecontroller.cpp .obj/moc_itemcontroller.cpp .obj/moc_monstercontroller.cpp .obj/moc_playercontroller.cpp .obj/moc_weaponcontroller.cpp .obj/moc_placecontroller.cpp
 .obj/moc_applicationcontroller.cpp: /usr/local/Cellar/treefrog/1.19.0/include/treefrog/TActionController \
 		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tactioncontroller.h \
 		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QObject \
@@ -1345,6 +1351,107 @@ compiler_moc_header_clean:
 		/usr/local/Cellar/qt/5.9.2/bin/moc
 	/usr/local/Cellar/qt/5.9.2/bin/moc $(DEFINES) --include .obj//moc_predefs.h -I/usr/local/Cellar/qt/5.9.2/mkspecs/macx-clang -I/Users/Ricky/Desktop/gameapp/controllers -I/Users/Ricky/Desktop/gameapp/helpers -I/Users/Ricky/Desktop/gameapp/models -I/usr/local/Cellar/treefrog/1.19.0/include/treefrog -I/usr/local/Cellar/qt/5.9.2/lib/QtQml.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtSql.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtXml.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include -F/usr/local/Cellar/qt/5.9.2/lib weaponcontroller.h -o .obj/moc_weaponcontroller.cpp
 
+.obj/moc_placecontroller.cpp: applicationcontroller.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TActionController \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tactioncontroller.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QObject \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qobject.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QString \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qstring.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/QHostAddress \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtXml.framework/Headers/QDomDocument \
+		/usr/local/Cellar/qt/5.9.2/lib/QtXml.framework/Headers/qdom.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TGlobal \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tglobal.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QtGlobal \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qglobal.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QMetaType \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qmetatype.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TfNamespace \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tfnamespace.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TDebug \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tdebug.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QTextStream \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qtextstream.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TWebApplication \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/twebapplication.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QCoreApplication \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qcoreapplication.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QVector \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qvector.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QSettings \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qsettings.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QBasicTimer \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qbasictimer.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/macx-clang/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/common/mac/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/common/posix/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/common/c89/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QAbstractNativeEventFilter \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qabstractnativeeventfilter.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tfexception.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TAbstractController \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tabstractcontroller.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QVariant \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qvariant.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TActionHelper \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tactionhelper.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QStringList \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qstringlist.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QByteArray \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qbytearray.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QUrl \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qurl.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QPair \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qpair.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpRequest \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttprequest.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QList \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qlist.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QSharedData \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qshareddata.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TMultipartFormData \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tmultipartformdata.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QMap \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qmap.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QFile \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qfile.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TCookieJar \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tcookiejar.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/QNetworkCookie \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpRequestHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttprequestheader.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttpheader.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TInternetMessageHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tinternetmessageheader.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QDateTime \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qdatetime.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TCookie \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonDocument \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsondocument.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpResponse \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttpresponse.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpResponseHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttpresponseheader.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TSession \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tsession.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TAccessValidator \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/taccessvalidator.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonObject \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsonobject.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonArray \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsonarray.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonValue \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsonvalue.h \
+		../helpers/applicationhelper.h \
+		placecontroller.h \
+		.obj/moc_predefs.h \
+		/usr/local/Cellar/qt/5.9.2/bin/moc
+	/usr/local/Cellar/qt/5.9.2/bin/moc $(DEFINES) --include .obj//moc_predefs.h -I/usr/local/Cellar/qt/5.9.2/mkspecs/macx-clang -I/Users/Ricky/Desktop/gameapp/controllers -I/Users/Ricky/Desktop/gameapp/helpers -I/Users/Ricky/Desktop/gameapp/models -I/usr/local/Cellar/treefrog/1.19.0/include/treefrog -I/usr/local/Cellar/qt/5.9.2/lib/QtQml.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtSql.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtXml.framework/Headers -I/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include -F/usr/local/Cellar/qt/5.9.2/lib placecontroller.h -o .obj/moc_placecontroller.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
 compiler_rez_source_make_all:
@@ -1557,7 +1664,26 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		../models/game.h \
 		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QSharedDataPointer \
 		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TAbstractModel \
-		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tabstractmodel.h
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tabstractmodel.h \
+		../models/monster.h \
+		../models/place.h \
+		../models/weapon.h \
+		../models/player.h \
+		../models/item.h \
+		../models/sqlobjects/playerobject.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TSqlObject \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tsqlobject.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtSql.framework/Headers/QSqlRecord \
+		/usr/local/Cellar/qt/5.9.2/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtSql.framework/Headers/QSqlError \
+		/usr/local/Cellar/qt/5.9.2/lib/QtSql.framework/Headers/qsqlerror.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QVariantMap \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TModelObject \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tmodelobject.h \
+		../models/sqlobjects/monsterobject.h \
+		../models/sqlobjects/weaponobject.h \
+		../models/sqlobjects/itemobject.h \
+		../models/sqlobjects/placeobject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/gamecontroller.o gamecontroller.cpp
 
 .obj/itemcontroller.o: itemcontroller.cpp itemcontroller.h \
@@ -1972,6 +2098,109 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tabstractmodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/weaponcontroller.o weaponcontroller.cpp
 
+.obj/placecontroller.o: placecontroller.cpp placecontroller.h \
+		applicationcontroller.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TActionController \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tactioncontroller.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QObject \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qobject.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QString \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qstring.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/QHostAddress \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtXml.framework/Headers/QDomDocument \
+		/usr/local/Cellar/qt/5.9.2/lib/QtXml.framework/Headers/qdom.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TGlobal \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tglobal.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QtGlobal \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qglobal.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QMetaType \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qmetatype.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TfNamespace \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tfnamespace.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TDebug \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tdebug.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QTextStream \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qtextstream.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TWebApplication \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/twebapplication.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QCoreApplication \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qcoreapplication.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QVector \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qvector.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QSettings \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qsettings.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QBasicTimer \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qbasictimer.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/macx-clang/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/common/mac/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/common/posix/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/mkspecs/common/c89/qplatformdefs.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QAbstractNativeEventFilter \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qabstractnativeeventfilter.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tfexception.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TAbstractController \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tabstractcontroller.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QVariant \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qvariant.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TActionHelper \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tactionhelper.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QStringList \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qstringlist.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QByteArray \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qbytearray.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QUrl \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qurl.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QPair \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qpair.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpRequest \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttprequest.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QList \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qlist.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QSharedData \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qshareddata.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TMultipartFormData \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tmultipartformdata.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QMap \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qmap.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QFile \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qfile.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TCookieJar \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tcookiejar.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/QNetworkCookie \
+		/usr/local/Cellar/qt/5.9.2/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpRequestHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttprequestheader.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttpheader.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TInternetMessageHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tinternetmessageheader.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QDateTime \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qdatetime.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TCookie \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonDocument \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsondocument.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpResponse \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttpresponse.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/THttpResponseHeader \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/thttpresponseheader.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TSession \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tsession.h \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TAccessValidator \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/taccessvalidator.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonObject \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsonobject.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonArray \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsonarray.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QJsonValue \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/qjsonvalue.h \
+		../helpers/applicationhelper.h \
+		../models/place.h \
+		/usr/local/Cellar/qt/5.9.2/lib/QtCore.framework/Headers/QSharedDataPointer \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/TAbstractModel \
+		/usr/local/Cellar/treefrog/1.19.0/include/treefrog/tabstractmodel.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/placecontroller.o placecontroller.cpp
+
 .obj/moc_applicationcontroller.o: .obj/moc_applicationcontroller.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/moc_applicationcontroller.o .obj/moc_applicationcontroller.cpp
 
@@ -1989,6 +2218,9 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 
 .obj/moc_weaponcontroller.o: .obj/moc_weaponcontroller.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/moc_weaponcontroller.o .obj/moc_weaponcontroller.cpp
+
+.obj/moc_placecontroller.o: .obj/moc_placecontroller.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/moc_placecontroller.o .obj/moc_placecontroller.cpp
 
 ####### Install
 

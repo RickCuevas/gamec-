@@ -2,16 +2,16 @@
 #include <TreeFrogView>
 #include "applicationhelper.h"
 
-class T_VIEW_EXPORT game_equipView : public TActionView
+class T_VIEW_EXPORT game_reserved_spaceView : public TActionView
 {
   Q_OBJECT
 public:
   Q_INVOKABLE
-  game_equipView() : TActionView() { }
+  game_reserved_spaceView() : TActionView() { }
   QString toString();
 };
 
-QString game_equipView::toString()
+QString game_reserved_spaceView::toString()
 {
   responsebody.reserve(774);
   responsebody += QLatin1String("\n");
@@ -26,6 +26,6 @@ QString game_equipView::toString()
   return responsebody;
 }
 
-T_DEFINE_VIEW(game_equipView)
+T_DEFINE_VIEW(game_reserved_spaceView)
 
-#include "game_equipView.moc"
+#include "game_reserved_spaceView.moc"

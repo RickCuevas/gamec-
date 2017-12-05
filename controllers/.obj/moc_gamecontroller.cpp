@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GameController_t {
-    QByteArrayData data[17];
-    char stringdata0[124];
+    QByteArrayData data[18];
+    char stringdata0[139];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,18 +42,19 @@ QT_MOC_LITERAL(7, 47, 5), // "equip"
 QT_MOC_LITERAL(8, 53, 4), // "nada"
 QT_MOC_LITERAL(9, 58, 7), // "staging"
 QT_MOC_LITERAL(10, 66, 6), // "reboot"
-QT_MOC_LITERAL(11, 73, 23), // "randomize_things_to_map"
-QT_MOC_LITERAL(12, 97, 4), // "show"
-QT_MOC_LITERAL(13, 102, 2), // "id"
-QT_MOC_LITERAL(14, 105, 6), // "create"
-QT_MOC_LITERAL(15, 112, 4), // "save"
-QT_MOC_LITERAL(16, 117, 6) // "remove"
+QT_MOC_LITERAL(11, 73, 14), // "reserved_space"
+QT_MOC_LITERAL(12, 88, 23), // "randomize_things_to_map"
+QT_MOC_LITERAL(13, 112, 4), // "show"
+QT_MOC_LITERAL(14, 117, 2), // "id"
+QT_MOC_LITERAL(15, 120, 6), // "create"
+QT_MOC_LITERAL(16, 127, 4), // "save"
+QT_MOC_LITERAL(17, 132, 6) // "remove"
 
     },
     "GameController\0index\0\0welcome\0loop\0"
     "seed\0battle\0equip\0nada\0staging\0reboot\0"
-    "randomize_things_to_map\0show\0id\0create\0"
-    "save\0remove"
+    "reserved_space\0randomize_things_to_map\0"
+    "show\0id\0create\0save\0remove"
 };
 #undef QT_MOC_LITERAL
 
@@ -63,28 +64,29 @@ static const uint qt_meta_data_GameController[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
-       1,  105, // constructors
+       1,  111, // constructors
        0,       // flags
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   84,    2, 0x0a /* Public */,
-       3,    0,   85,    2, 0x0a /* Public */,
-       4,    0,   86,    2, 0x0a /* Public */,
-       5,    0,   87,    2, 0x0a /* Public */,
-       6,    0,   88,    2, 0x0a /* Public */,
-       7,    0,   89,    2, 0x0a /* Public */,
-       8,    0,   90,    2, 0x0a /* Public */,
-       9,    0,   91,    2, 0x0a /* Public */,
-      10,    0,   92,    2, 0x0a /* Public */,
-      11,    0,   93,    2, 0x0a /* Public */,
-      12,    1,   94,    2, 0x0a /* Public */,
-      14,    0,   97,    2, 0x0a /* Public */,
-      15,    1,   98,    2, 0x0a /* Public */,
-      16,    1,  101,    2, 0x0a /* Public */,
+       1,    0,   89,    2, 0x0a /* Public */,
+       3,    0,   90,    2, 0x0a /* Public */,
+       4,    0,   91,    2, 0x0a /* Public */,
+       5,    0,   92,    2, 0x0a /* Public */,
+       6,    0,   93,    2, 0x0a /* Public */,
+       7,    0,   94,    2, 0x0a /* Public */,
+       8,    0,   95,    2, 0x0a /* Public */,
+       9,    0,   96,    2, 0x0a /* Public */,
+      10,    0,   97,    2, 0x0a /* Public */,
+      11,    0,   98,    2, 0x0a /* Public */,
+      12,    0,   99,    2, 0x0a /* Public */,
+      13,    1,  100,    2, 0x0a /* Public */,
+      15,    0,  103,    2, 0x0a /* Public */,
+      16,    1,  104,    2, 0x0a /* Public */,
+      17,    1,  107,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -97,16 +99,17 @@ static const uint qt_meta_data_GameController[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   13,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   13,
-    QMetaType::Void, QMetaType::QString,   13,
+    QMetaType::Void, QMetaType::QString,   14,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   14,
+    QMetaType::Void, QMetaType::QString,   14,
 
  // constructors: parameters
     0x80000000 | 2,
 
  // constructors: name, argc, parameters, tag, flags
-       0,    0,  104,    2, 0x0e /* Public */,
+       0,    0,  110,    2, 0x0e /* Public */,
 
        0        // eod
 };
@@ -132,11 +135,12 @@ void GameController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 6: _t->nada(); break;
         case 7: _t->staging(); break;
         case 8: _t->reboot(); break;
-        case 9: _t->randomize_things_to_map(); break;
-        case 10: _t->show((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 11: _t->create(); break;
-        case 12: _t->save((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 13: _t->remove((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 9: _t->reserved_space(); break;
+        case 10: _t->randomize_things_to_map(); break;
+        case 11: _t->show((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 12: _t->create(); break;
+        case 13: _t->save((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 14: _t->remove((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -167,13 +171,13 @@ int GameController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 15)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 14;
+        _id -= 15;
     }
     return _id;
 }
